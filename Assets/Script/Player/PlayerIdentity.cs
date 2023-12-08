@@ -5,6 +5,10 @@ using UnityEngine;
 public class PlayerIdentity : MonoBehaviour
 {
     [SerializeField]private int playerHeightNow;
+    [SerializeField]private PlayerMovement playerMovement;
+    private void Awake() {
+        playerMovement = GetComponent<PlayerMovement>();
+    }
     public int PlayerHeight()
     {
         return playerHeightNow;
@@ -15,6 +19,14 @@ public class PlayerIdentity : MonoBehaviour
         if(PlatformSpawner.Instance.GetTotalHeight()-1 == newHeight)
         {
             PlatformSpawner.Instance.SpawnPlatform(3);
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D other) 
+    {
+        if(other.gameObject.CompareTag("Enemy"))
+        {
+            if(!playerMovement.IsSlamming())Debug.Log("Dead");
+            
         }
     }
 }

@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - Attack
+  - Destroyable
+  - Enemy
   layers:
   - Default
   - TransparentFX

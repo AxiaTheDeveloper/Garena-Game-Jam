@@ -9,4 +9,16 @@ public class PlayerAnimator : MonoBehaviour
     {
         animator.SetBool("IsWalking", change);
     }
+    public void PlayerJump()
+    {
+        animator.SetTrigger("Jump");
+    }
+    public void PlayerFall()
+    {
+        animator.SetBool("IsFalling",true);
+    }
+    public void PlayerDoneFall()
+    {
+        animator.SetBool("IsFalling",false);
+    }
 }

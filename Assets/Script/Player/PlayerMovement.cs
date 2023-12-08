@@ -45,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
                     firstHitSlam = false;
                     StartCoroutine(SlamAttack());
                 }
+                rb.velocity = new Vector2(rb.velocity.x, Mathf.Max(rb.velocity.y, -maxFallSpeed));
                 if(moveDirection != Vector2.zero)moveDirection = Vector2.zero;
                 slamingCooldown-= Time.deltaTime;
                 if(slamingCooldown <= 0)isSlamming = false;
@@ -62,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
                 Slam();
             }
             if(rb.velocity.y == 0 && !isJumping)moveDirection = gameInput.GetInputPlayerDirection();
+            // moveDirection != Vector2.zero;
         }
         if(moveDirection != Vector2.zero)
         {
@@ -74,7 +76,7 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator SlamAttack()
     {
         slamAttack.SetActive(true);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.2f);
         slamAttack.SetActive(false);
     }
     private void FixedUpdate() 
@@ -125,10 +127,12 @@ public class PlayerMovement : MonoBehaviour
             {
                 SetPlayerGravityScale(defaultGravScale * gravScaleMultiplier);
                 rb.velocity = new Vector2(rb.velocity.x, Mathf.Max(rb.velocity.y, -maxFallSpeed));
+                // Debug.Log(Mathf.Max(rb.velocity.y, -maxFallSpeed));
             }
             else if(rb.velocity.y <= 0)
             {
                 SetPlayerGravityScale(defaultGravScale * gravScaleMultiplier);
+                // Debug.Log(Mathf.Max(rb.velocity.y, -maxFallSpeed));
             }
             else SetPlayerGravityScale(defaultGravScale);
         }
@@ -138,6 +142,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if(Physics2D.OverlapBox(transform.position - new Vector3(0,0.5f), checkGroundSize, 0, groundLayer))
             {
+                playerAnimator.PlayerDoneFall();
                 SetPlayerGravityScale(defaultGravScale);
                 lastOnGroundTime = coyoteTime;
                 isOnGround = true;
@@ -147,7 +152,12 @@ public class PlayerMovement : MonoBehaviour
                 isOnGround = false;
             }
         }
-        if(isJumping && rb.velocity.y < 0)isJumping = false;
+        if(isJumping && rb.velocity.y < 0)
+        {
+            isJumping = false;
+            playerAnimator.PlayerFall();
+        }
+        
         if(JumpInput() && lastInputJumpTime > 0 && !isSlamming)
         {
             lastInputJumpTime = 0;
@@ -160,6 +170,7 @@ public class PlayerMovement : MonoBehaviour
             }
             rb.velocity = new Vector2(rb.velocity.x, 0);
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            playerAnimator.PlayerJump();
 
             isJumping = true;
             isJumpCut = false;
@@ -185,8 +196,13 @@ public class PlayerMovement : MonoBehaviour
     {
         isSlamming = true;
         SetPlayerGravityScale(defaultGravScale * slamGravScaleMultiplier);
-        rb.velocity = new Vector2(rb.velocity.x, Mathf.Max(rb.velocity.y, -maxFallSpeed));
+        
         slamingCooldown = slamingCooldownTime;
+        // Debug.Log(Mathf.Max(rb.velocity.y, -maxFallSpeed));
         firstHitSlam = true;
+    }
+    public bool IsSlamming()
+    {
+        return isSlamming;
     }
 }

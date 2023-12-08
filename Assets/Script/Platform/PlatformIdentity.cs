@@ -16,4 +16,5 @@ public class PlatformIdentity : MonoBehaviour
             if(identity.PlayerHeight() < platformHeight)identity.ChangePlayerHeight(platformHeight);
         }
     }
+    
 }
