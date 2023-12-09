@@ -35,5 +35,11 @@ public class Bullet : MonoBehaviour
     {
         bulletTimeMax = change;
     }
+    private void OnTriggerEnter2D(Collider2D other) {
+        if(other.gameObject.CompareTag("Player"))
+        {
+            other.GetComponent<PlayerIdentity>().Death();
+        }
+    }
 
 }

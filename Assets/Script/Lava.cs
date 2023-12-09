@@ -10,13 +10,17 @@ public class Lava : MonoBehaviour
     [SerializeField]private Rigidbody2D rb;
     private void Update() 
     {
-        if(startGoingUpTimer > 0)startGoingUpTimer -= Time.deltaTime;
-        else
+        if(GameManager.Instance.StateGame() == GameManager.GameStates.GameStart)
         {
-            LavaGoingUpSpeed = LavaGoingUpSpeedStart * (PlayerIdentity.Instance.PlayerHeight()/10+1);
-            // rb.velocity = new Vector2(0f, 1 * LavaGoingUpSpeedStart);
-            transform.Translate(Vector3.up * LavaGoingUpSpeed * Time.deltaTime);
+            if(startGoingUpTimer > 0)startGoingUpTimer -= Time.deltaTime;
+            else
+            {
+                LavaGoingUpSpeed = LavaGoingUpSpeedStart * (PlayerIdentity.Instance.PlayerHeight()/10+1);
+                // rb.velocity = new Vector2(0f, 1 * LavaGoingUpSpeedStart);
+                transform.Translate(Vector3.up * LavaGoingUpSpeed * Time.deltaTime);
+            }
         }
+        
     }
     private void OnTriggerEnter2D(Collider2D other) 
     {

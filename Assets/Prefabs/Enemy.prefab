@@ -4887,7 +4887,7 @@ GameObject:
   - component: {fileID: 4435862889359273317}
   - component: {fileID: 107871840}
   - component: {fileID: 7529586941850072602}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5068,7 +5068,7 @@ GameObject:
   - component: {fileID: 4435862890274762533}
   - component: {fileID: 4435862890274762528}
   - component: {fileID: 4435862890274762529}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EnemyMove
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -5184,7 +5184,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4435862890611048194
 Transform:
   m_ObjectHideFlags: 0

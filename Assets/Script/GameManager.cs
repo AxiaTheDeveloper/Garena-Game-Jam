@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     private void Awake() 
     {
         Instance = this;
-        stateGame = GameStates.GameStart;
+        stateGame = GameStates.WaitingToStart;
     }
 
     public void Pause()

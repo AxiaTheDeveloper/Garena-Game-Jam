@@ -23,8 +23,7 @@ public class PlayerIdentity : MonoBehaviour
             PlatformSpawner.Instance.SpawnPlatform(3);
         }
     }
-    private void OnCollisionEnter2D(Collision2D other) 
-    {
+    private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.CompareTag("Enemy"))
         {
             if(!playerMovement.IsSlamming())Death();
@@ -35,5 +34,6 @@ public class PlayerIdentity : MonoBehaviour
     {
         //play animation
         //play fade ui
+        Debug.Log("ded");
     }
 }
