@@ -4993,6 +4993,9 @@ MonoBehaviour:
   slamingCooldownTime: 0.2
   slamingCooldown: 0
   slamAttack: {fileID: 1359023292}
+  cinemachine: {fileID: 1127086857}
+  intensityAmp: 3
+  timeForShake: 0.5
 --- !u!114 &871214919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5007,6 +5010,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHeightNow: 0
   playerMovement: {fileID: 0}
+  playerAnimator: {fileID: 1161183392}
 --- !u!70 &871214920
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -13239,6 +13243,7 @@ MonoBehaviour:
   playerHardLanded: 0
   isNotSlamming: 0
   isStuck: 0
+  isDead: 0
   particleEffectLanding: {fileID: 0}
   particleEffectSlam: {fileID: 0}
   playerAttackCollider: {fileID: 0}
@@ -18248,6 +18253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46a3dab5db904874fafdb30d0c5497f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fade: {fileID: 0}
   stateGame: 1
   isPause: 0
 --- !u!4 &1575004036
@@ -18308,6 +18314,7 @@ GameObject:
   - component: {fileID: 1704495029}
   - component: {fileID: 1704495028}
   - component: {fileID: 1704495030}
+  - component: {fileID: 1704495031}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -18412,6 +18419,23 @@ MonoBehaviour:
   m_MaximumFOV: 60
   m_MinimumOrthoSize: 1
   m_MaximumOrthoSize: 5000
+--- !u!114 &1704495031
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704495025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  m_PivotOffset: {x: 0, y: 0, z: 0}
+  m_AmplitudeGain: 1
+  m_FrequencyGain: 1
+  mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &1721520633
 GameObject:
   m_ObjectHideFlags: 0

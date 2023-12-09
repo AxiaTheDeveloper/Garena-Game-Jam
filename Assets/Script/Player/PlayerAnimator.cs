@@ -13,12 +13,14 @@ public class PlayerAnimator : MonoBehaviour
     [SerializeField] private bool playerHardLanded;
     [SerializeField] private bool isNotSlamming;
     [SerializeField] private bool isStuck;
+    [SerializeField] private bool isDead;
     [SerializeField] private ParticleSystem particleEffectLanding;
     [SerializeField] private ParticleSystem particleEffectSlam;
     [SerializeField] private PlayerAttack playerAttackCollider;
 
     private void Awake()
     {
+        isDead = false;
         particleEffectLanding = gameObject.transform.parent.gameObject.transform.GetChild(2).gameObject.transform.GetChild(0).gameObject.GetComponent<ParticleSystem>();
         particleEffectSlam = gameObject.transform.parent.gameObject.transform.GetChild(2).gameObject.transform.GetChild(1).gameObject.GetComponent<ParticleSystem>();
         playerAttackCollider = gameObject.transform.parent.gameObject.transform.GetChild(1).gameObject.GetComponent<PlayerAttack>();
@@ -26,12 +28,12 @@ public class PlayerAnimator : MonoBehaviour
 
     private void Update()
     {
-        if (isFalling && !runOnceFalling && isNotSlamming && !isStuck)
+        if (isFalling && !runOnceFalling && isNotSlamming && !isStuck && !isDead)
         {
             animator.Play("Falling");
             runOnceFalling = true;
         }
-        if (isJumping && !runOnceJumping && !isFalling)
+        if (isJumping && !runOnceJumping && !isFalling && !isDead)
         {
             animator.Play("Jump");
             runOnceJumping = true;
@@ -39,11 +41,11 @@ public class PlayerAnimator : MonoBehaviour
     }
     public void PlayerWalk(bool change)
     {
-        if (!this.animator.GetCurrentAnimatorStateInfo(0).IsName("Landed") && !isStuck && GameManager.Instance.StateGame() != GameManager.GameStates.Dead)
+        if (!this.animator.GetCurrentAnimatorStateInfo(0).IsName("Landed") && !isStuck && !isDead)
         {
             if (change && !isFalling && !isJumping)
                 animator.Play("Walk");
-            else if (!change && !isFalling && !isJumping && GameManager.Instance.StateGame() != GameManager.GameStates.Dead)
+            else if (!change && !isFalling && !isJumping)
                 animator.Play("Idle");
         }
        
@@ -59,7 +61,7 @@ public class PlayerAnimator : MonoBehaviour
     }
     public void PlayerDoneFall()
     {
-        if (isFalling && playerHardLanded)
+        if (isFalling && playerHardLanded && !isDead)
         {
             animator.Play("Landed");
             playerHardLanded = false;
@@ -114,11 +116,12 @@ public class PlayerAnimator : MonoBehaviour
     }
     public void DieAnimation()
     {
+        isDead = true;
         animator.SetTrigger("Die");
     }
     public void Diee()
     {
-        // Destroy(this.gameObject);
+        gameObject.SetActive(false);
         GameManager.Instance.Death();
 
     }
