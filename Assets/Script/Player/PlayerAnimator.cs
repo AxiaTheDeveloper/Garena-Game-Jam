@@ -64,6 +64,7 @@ public class PlayerAnimator : MonoBehaviour
             animator.Play("Landed");
             playerHardLanded = false;
         }
+        isJumping = false;
         runOnceFalling = false;
         runOnceJumping = false;
         isFalling = false;

@@ -60,7 +60,6 @@ public class PlayerMovement : MonoBehaviour
                 {
                     moveDirection = gameInput.GetInputPlayerDirection();
                 }
-                
             }
             else
             {
@@ -174,7 +173,7 @@ public class PlayerMovement : MonoBehaviour
         }
         
         
-        if(JumpInput() && lastInputJumpTime > 0 && !isSlamming)
+        if(JumpInput() && lastInputJumpTime > 0 && !isSlamming && isOnGround)
         {
             lastInputJumpTime = 0;
             lastOnGroundTime = 0;
