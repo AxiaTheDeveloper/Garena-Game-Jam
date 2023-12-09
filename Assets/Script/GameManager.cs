@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance{get; private set;}
+    [SerializeField]private CurtainFadeGame fade;
     public enum GameStates
     {
         WaitingToStart, GameStart, Dead, Pause
@@ -37,6 +38,7 @@ public class GameManager : MonoBehaviour
     public void Death()
     {
         stateGame = GameStates.Dead;
+        fade.ShowUIDead();
     }
     public GameStates StateGame()
     {

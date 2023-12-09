@@ -75,6 +75,13 @@ public class PlayerMovement : MonoBehaviour
                 playerRotation.Rotate(moveDirection.x);
             }
         }
+        else
+        {
+            if(gameManager.StateGame() == GameManager.GameStates.Dead)
+            {
+                playerAnimator.PlayerWalk(false);
+            }
+        }
         
         
         

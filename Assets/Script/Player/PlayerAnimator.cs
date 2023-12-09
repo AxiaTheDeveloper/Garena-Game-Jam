@@ -39,11 +39,11 @@ public class PlayerAnimator : MonoBehaviour
     }
     public void PlayerWalk(bool change)
     {
-        if (!this.animator.GetCurrentAnimatorStateInfo(0).IsName("Landed") && !isStuck)
+        if (!this.animator.GetCurrentAnimatorStateInfo(0).IsName("Landed") && !isStuck && GameManager.Instance.StateGame() != GameManager.GameStates.Dead)
         {
             if (change && !isFalling && !isJumping)
                 animator.Play("Walk");
-            else if (!change && !isFalling && !isJumping)
+            else if (!change && !isFalling && !isJumping && GameManager.Instance.StateGame() != GameManager.GameStates.Dead)
                 animator.Play("Idle");
         }
        
@@ -111,5 +111,15 @@ public class PlayerAnimator : MonoBehaviour
     public bool GetUnstuck()
     {
         return isStuck;
+    }
+    public void DieAnimation()
+    {
+        animator.SetTrigger("Die");
+    }
+    public void Diee()
+    {
+        // Destroy(this.gameObject);
+        GameManager.Instance.Death();
+
     }
 }

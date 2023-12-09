@@ -7,6 +7,7 @@ public class PlayerIdentity : MonoBehaviour
     public static PlayerIdentity Instance{get; private set;}
     [SerializeField]private int playerHeightNow;
     [SerializeField]private PlayerMovement playerMovement;
+    [SerializeField]private PlayerAnimator playerAnimator;
     private void Awake() {
         playerMovement = GetComponent<PlayerMovement>();
         Instance = this;
@@ -32,8 +33,7 @@ public class PlayerIdentity : MonoBehaviour
     }
     public void Death()
     {
-        //play animation
-        //play fade ui
-        Debug.Log("ded");
+        playerAnimator.DieAnimation();
+        // GameManager.Instance.Death();
     }
 }

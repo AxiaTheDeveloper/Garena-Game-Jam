@@ -4,25 +4,30 @@ using UnityEngine;
 
 public class CurtainFadeGame : MonoBehaviour
 {
-    [SerializeField]private RectTransform fadeBG;
-    [SerializeField]private float hideUISpeed = 2f;
+    [SerializeField]private CanvasGroup fadeBG;
+    [SerializeField]private CanvasGroup deathScreen;
+    [SerializeField]private float hideUISpeed = 0.8f;
     [SerializeField]private GameManager gameManager;
     private void Awake() {
-        fadeBG = GetComponent<RectTransform>();
-        
+        // fadeBG = GetComponent<RectTransform>();
+        deathScreen.alpha = 0f;
     }
     private void Start() 
     {
         HideUI();
     }
     private void HideUI(){
-        LeanTween.alpha(fadeBG, 0f, hideUISpeed).setOnComplete(
+        fadeBG.LeanAlpha(0f, hideUISpeed).setOnComplete(
             ()=> gameManager.GameStart()
         );
     }
     public void ShowUIDead(){
-        LeanTween.alpha(fadeBG, 1f, 2f).setOnComplete(
-            ()=> Debug.Log("Ded")
+        deathScreen.gameObject.SetActive(true);
+        fadeBG.LeanAlpha( 1f, hideUISpeed).setOnComplete(
+            ()=> 
+            {
+                deathScreen.LeanAlpha(1f, 0.8f);
+            }
         );
     }
 }
