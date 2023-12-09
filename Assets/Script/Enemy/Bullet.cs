@@ -36,7 +36,7 @@ public class Bullet : MonoBehaviour
         gameObject.SetActive(true);
         bulletTime = bulletTimeMax;
         isLaunching = true;
-        rb.velocity = new Vector2(1 * bulletSpeed, 0f);
+        rb.velocity = new Vector2(arah * bulletSpeed, 0f);
         // Debug.Log(rb.velocity + "sini");/
     }
     public void ChangeSpeed(float change)
@@ -50,12 +50,12 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.CompareTag("Player"))
         {
-            other.GetComponent<PlayerIdentity>().Death();
+            if(!PlayerMovement.Instance.IsSlamming())other.GetComponent<PlayerIdentity>().Death();
+            
         }
-        if(!(other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("AreaEffector")))
+        if(other.gameObject.CompareTag("Player")|| other.gameObject.CompareTag("Ground"))
         {
             BackToNormal();
-            
         }
         
     }

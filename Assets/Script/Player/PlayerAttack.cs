@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    [SerializeField]private float attackSize;//1 ganti attack size
-    [SerializeField]private float attackSizeMultiplier;
+    [SerializeField]private float attackSizeMultiplier, jumpforceMultiplier;
     [SerializeField]private BoxCollider2D coll;
     [SerializeField]private PlayerMovement playerMovement;
-    [SerializeField]private int giftNumber;
+    [SerializeField]private int giftNumber, attackGiftCounter, jumpGiftCounter;
+    private int enemyKilledTotal = 0;
     private void OnTriggerEnter2D(Collider2D other) 
     {
         if(other.gameObject.CompareTag("Destroyable"))
@@ -19,6 +19,7 @@ public class PlayerAttack : MonoBehaviour
         {
             GachaGift();
             other.GetComponent<EnemyIdentity>().Suicide();
+            enemyKilledTotal++;
         }
     }
     private void GachaGift()
@@ -41,19 +42,14 @@ public class PlayerAttack : MonoBehaviour
             }
             if(giftNumber == 1)
             {
-                // attackSize *= attackSizeMultiplier;
-                Debug.Log("collider");
+                attackGiftCounter++;
                 coll.size = new Vector2(coll.size.x * attackSizeMultiplier, coll.size.y);
             }
             else if(giftNumber == 2)
             {
-                Debug.Log("Jump Force");
-                playerMovement.ChangeJumpForce(2);
+                jumpGiftCounter++;
+                playerMovement.ChangeJumpForce(jumpforceMultiplier);
             }
-            // else if(giftNumber == 3)
-            // {
-            //     playerMovement.ChangeJumpForce(2);
-            // }
         }
         else
         {
@@ -64,5 +60,17 @@ public class PlayerAttack : MonoBehaviour
     public float getRadius()
     {
         return coll.size.x;
+    }
+    public int GetEnemyKillTotal()
+    {
+        return enemyKilledTotal;
+    }
+    public int GetAttackGiftCounter()
+    {
+        return attackGiftCounter;
+    }
+    public int GetJumpGiftCounter()
+    {
+        return jumpGiftCounter;
     }
 }

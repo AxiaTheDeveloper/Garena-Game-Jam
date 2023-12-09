@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance{get; private set;}
+    public event EventHandler OnPause, OnUnPause;
     [SerializeField]private CurtainFadeGame fade;
+    [SerializeField]private DeathScreen deathScreen;
     public enum GameStates
     {
         WaitingToStart, GameStart, Dead, Pause
@@ -24,10 +27,12 @@ public class GameManager : MonoBehaviour
         if(isPause)
         {
             stateGame = GameStates.GameStart;
+            OnUnPause?.Invoke(this, EventArgs.Empty);
         }
         else
         {
             stateGame = GameStates.Pause;
+            OnPause?.Invoke(this, EventArgs.Empty);
         }
         isPause = !isPause;
     }
@@ -38,6 +43,7 @@ public class GameManager : MonoBehaviour
     public void Death()
     {
         stateGame = GameStates.Dead;
+        deathScreen.UpdateText();
         fade.ShowUIDead();
     }
     public GameStates StateGame()
