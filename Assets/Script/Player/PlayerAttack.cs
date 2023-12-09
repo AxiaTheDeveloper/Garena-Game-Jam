@@ -61,4 +61,8 @@ public class PlayerAttack : MonoBehaviour
         }
 
     }
+    public float getRadius()
+    {
+        return coll.size.x;
+    }
 }
