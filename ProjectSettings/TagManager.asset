@@ -49,6 +49,9 @@ TagManager:
   - name: Background
     uniqueID: 1702479473
     locked: 0
+  - name: Hiasan
+    uniqueID: 936879093
+    locked: 0
   - name: Player
     uniqueID: 1311322749
     locked: 0

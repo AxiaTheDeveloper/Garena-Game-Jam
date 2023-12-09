@@ -8,14 +8,18 @@ public class Bullet : MonoBehaviour
     [SerializeField]private Rigidbody2D rb;
     private void Update() 
     {
-        if(bulletTime > 0)
+        if(GameManager.Instance.StateGame() == GameManager.GameStates.GameStart)
         {
-            bulletTime -= Time.deltaTime;
+            if(bulletTime > 0)
+            {
+                bulletTime -= Time.deltaTime;
+            }
+            if(bulletTime <= 0)
+            {
+                gameObject.SetActive(false);
+            }
         }
-        if(bulletTime <= 0)
-        {
-            gameObject.SetActive(false);
-        }
+        
     }
     public void ShootBullet(int arah)
     {

@@ -12,7 +12,11 @@ public class EnemyMoving : MonoBehaviour
 
     private void Update() 
     {
-        Move();
+        if(GameManager.Instance.StateGame() == GameManager.GameStates.GameStart)
+        {
+            Move();
+        }
+        
     }
     private void Move()
     {
@@ -25,7 +29,8 @@ public class EnemyMoving : MonoBehaviour
                 if(transform.localScale.x != 1){
                     transform.localScale = new Vector3(1,1,1);
                 }
-                rb.velocity = new Vector2(moveSpeed * -1, 0f);
+                // rb.velocity = new Vector2(moveSpeed * -1, 0f);
+                transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
                 difDirectionTimer = difDirectionTimerMax;
             }
             else
@@ -44,7 +49,8 @@ public class EnemyMoving : MonoBehaviour
                 if(transform.localScale.x != -1){
                     transform.localScale = new Vector3(-1,1,1);
                 }
-                rb.velocity = new Vector2(moveSpeed * 1, 0f);
+                // rb.velocity = new Vector2(moveSpeed * 1, 0f);
+                transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
                 // b.MovePosition(rb.position + keyInput * speedMovement * Time.fixedDeltaTime);
                 // Debug.Log(rb.velocity);
                 difDirectionTimer = difDirectionTimerMax;

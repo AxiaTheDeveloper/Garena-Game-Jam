@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]private Rigidbody2D rb;
     [SerializeField]private PlayerRotation playerRotation;
     [SerializeField]private PlayerAnimator playerAnimator;
+    [SerializeField]private GameManager gameManager;
     
     [Header("Player Movement Horizontal")]
     [SerializeField]private float moveSpeed;
@@ -32,45 +33,50 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start() 
     {
+        if(!gameManager)gameManager = GameManager.Instance;
         if(!gameInput)gameInput = GameInput.Instance;
     }
     private void Update() 
     {
-        if(isOnGround)
+        if(gameManager.StateGame() == GameManager.GameStates.GameStart)
         {
-            if(isSlamming)
+            if(isOnGround)
             {
-
-                if(firstHitSlam)
+                if(isSlamming)
                 {
-                    firstHitSlam = false;
-                    playerAnimator.PlaySlamStuck();
-                    StartCoroutine(SlamAttack());
+
+                    if(firstHitSlam)
+                    {
+                        firstHitSlam = false;
+                        playerAnimator.PlaySlamStuck();
+                        StartCoroutine(SlamAttack());
+                    }
+                    rb.velocity = new Vector2(rb.velocity.x, Mathf.Max(rb.velocity.y, -maxFallSpeed));
+                    if(moveDirection != Vector2.zero)moveDirection = Vector2.zero;
+                    slamingCooldown-= Time.deltaTime;
+                    if(slamingCooldown <= 0 && !playerAnimator.GetUnstuck())isSlamming = false;
                 }
-                rb.velocity = new Vector2(rb.velocity.x, Mathf.Max(rb.velocity.y, -maxFallSpeed));
-                if(moveDirection != Vector2.zero)moveDirection = Vector2.zero;
-                slamingCooldown-= Time.deltaTime;
-                if(slamingCooldown <= 0 && !playerAnimator.GetUnstuck())isSlamming = false;
+                else
+                {
+                    moveDirection = gameInput.GetInputPlayerDirection();
+                }
+                
             }
             else
             {
-                moveDirection = gameInput.GetInputPlayerDirection();
+                if(gameInput.GetInputSlam() && rb.velocity.y != 0)
+                {
+                    Slam();
+                }
+                if(rb.velocity.y == 0 && !isJumping)moveDirection = gameInput.GetInputPlayerDirection();
+                // moveDirection != Vector2.zero;
             }
-            
-        }
-        else
-        {
-            if(gameInput.GetInputSlam() && rb.velocity.y != 0)
+            if(moveDirection != Vector2.zero)
             {
-                Slam();
+                playerRotation.Rotate(moveDirection.x);
             }
-            if(rb.velocity.y == 0 && !isJumping)moveDirection = gameInput.GetInputPlayerDirection();
-            // moveDirection != Vector2.zero;
         }
-        if(moveDirection != Vector2.zero)
-        {
-            playerRotation.Rotate(moveDirection.x);
-        }
+        
         
         
         JumpPlayer();
@@ -110,7 +116,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private bool JumpInput()
     {
-        if(gameInput.GetInputDownJump())
+        if(gameInput.GetInputDownJump() && gameManager.StateGame() == GameManager.GameStates.GameStart)
         {
             lastInputJumpTime = jumpInputBuffer;
             return lastOnGroundTime > 0 && !isJumping;
@@ -156,7 +162,7 @@ public class PlayerMovement : MonoBehaviour
                 isOnGround = false;
             }
         }
-        if(rb.velocity.y < 0 && isJumping)
+        if(rb.velocity.y <= 0 && isJumping)
         {
             isJumping = false;
         }
