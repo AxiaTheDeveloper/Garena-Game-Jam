@@ -507,7 +507,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -1.4, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -706,6 +706,7 @@ GameObject:
   - component: {fileID: 871214916}
   - component: {fileID: 871214919}
   - component: {fileID: 871214918}
+  - component: {fileID: 871214920}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -721,7 +722,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 871214913}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.4, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -737,13 +738,13 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 871214913}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00037695467, y: -0.011159658}
+  m_Offset: {x: 0.00037693977, y: -0.06648761}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -754,7 +755,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7853565, y: 0.8443577}
+  m_Size: {x: 0.7853565, y: 0.95501363}
   m_EdgeRadius: 0
 --- !u!50 &871214917
 Rigidbody2D:
@@ -772,7 +773,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: a863ee17920922442b3bcfc47fc1e042, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -799,7 +800,7 @@ MonoBehaviour:
   deccelerate: 10
   moveFriction: 0.2
   jumpForce: 10
-  checkGroundSize: {x: 0, y: -0.5}
+  checkGroundSize: {x: 0.64, y: 0.96}
   isOnGround: 0
   isJumping: 0
   isJumpCut: 0
@@ -830,6 +831,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHeightNow: 0
   playerMovement: {fileID: 0}
+--- !u!70 &871214920
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871214913}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0067353845, y: -0.083934575}
+  m_Size: {x: 0.7469622, y: 0.91046995}
+  m_Direction: 0
 --- !u!1 &1051140082
 GameObject:
   m_ObjectHideFlags: 0
@@ -1007,7 +1024,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1127086857}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -1.4, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1091,12 +1108,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -297659637, guid: bfed4e6335038d747baa0ed7358454b8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ef8675ac0dd59b847b9995cebbec27f1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.03125, y: 1.09375}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1112,7 +1129,7 @@ Animator:
   m_GameObject: {fileID: 1161183388}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1ab248cad7833244a8f1f811db2b8090, type: 2}
+  m_Controller: {fileID: 9100000, guid: 028ad5764bde66c4aa3f549a109c4cb9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1135,6 +1152,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1161183391}
+  isWalking: 0
+  isFalling: 0
+  runOnceFalling: 0
+  runOnceJumping: 0
+  isJumping: 0
+  playerHardLanded: 0
 --- !u!114 &1161183393
 MonoBehaviour:
   m_ObjectHideFlags: 0
