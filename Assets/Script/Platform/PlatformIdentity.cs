@@ -5,6 +5,14 @@ using UnityEngine;
 public class PlatformIdentity : MonoBehaviour
 {
     [SerializeField]private int platformHeight;
+    [SerializeField]private AreaEffector2D areaEffector2D;
+    [SerializeField]private bool isWindy, isLeft;
+    [SerializeField]private float magnitudes, variations;
+    public void ChangeAreaEffector2D(float magnitude, float variation)
+    {
+        magnitudes = magnitude;
+        variations = variation;
+    }
     public void ChangePlatformHeight(int newPH)
     {
         platformHeight = newPH;

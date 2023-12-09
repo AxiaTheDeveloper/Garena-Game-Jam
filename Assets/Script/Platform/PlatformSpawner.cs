@@ -21,18 +21,22 @@ public class PlatformSpawner : MonoBehaviour
         for(int i=0;i<totalSpawn;i++)
         {
             int maxLength = 0, minLength = 0;
+            int tahapPlatform = 0;
             if(totalHeight/10 == 0)
             {
+                tahapPlatform = 0;
                 minLength = 0;
                 maxLength = 9;
             }
             else if(totalHeight/10 == 1)
             {
+                tahapPlatform = 1;
                 minLength = 9;
                 maxLength = 18;
             }
             else if(totalHeight/10 == 2)
             {
+                tahapPlatform = 2;
                 minLength = 4;
                 maxLength = platformsPrefab.Length;
             }
