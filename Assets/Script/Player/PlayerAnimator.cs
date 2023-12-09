@@ -11,10 +11,19 @@ public class PlayerAnimator : MonoBehaviour
     [SerializeField] private bool runOnceJumping;
     [SerializeField] private bool isJumping;
     [SerializeField] private bool playerHardLanded;
+    [SerializeField] private bool isNotSlamming;
+    [SerializeField] private ParticleSystem particleEffectLanding;
+    [SerializeField] private ParticleSystem particleEffectSlam;
+
+    private void Awake()
+    {
+        particleEffectLanding = gameObject.transform.parent.gameObject.transform.GetChild(2).gameObject.transform.GetChild(0).gameObject.GetComponent<ParticleSystem>();
+        particleEffectSlam = gameObject.transform.parent.gameObject.transform.GetChild(2).gameObject.transform.GetChild(1).gameObject.GetComponent<ParticleSystem>();
+    }
 
     private void Update()
     {
-        if (isFalling && !runOnceFalling)
+        if (isFalling && !runOnceFalling && isNotSlamming)
         {
             animator.Play("Falling");
             runOnceFalling = true;
@@ -49,16 +58,31 @@ public class PlayerAnimator : MonoBehaviour
     {
         if (isFalling && playerHardLanded)
         {
-            Debug.Log("Landed!");
             animator.Play("Landed");
             playerHardLanded = false;
         }
         runOnceFalling = false;
         runOnceJumping = false;
         isFalling = false;
+        isNotSlamming = true;
     }
     public void PlayerHardLanded()
     {
         playerHardLanded = true;
+    }
+
+    public void PlayerSlamming()
+    {
+        isNotSlamming = false;
+        animator.Play("SlamLoop");
+    }
+    
+    public void PlayParticleEffectLanding()
+    {
+        particleEffectLanding.Play();
+    }
+    public void PlayParticleEffectSlam()
+    {
+        particleEffectSlam.Play();
     }
 }

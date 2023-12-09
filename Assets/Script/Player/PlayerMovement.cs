@@ -146,7 +146,7 @@ public class PlayerMovement : MonoBehaviour
                 SetPlayerGravityScale(defaultGravScale);
                 lastOnGroundTime = coyoteTime;
                 isOnGround = true;
-                if (rb.velocity.y < -5 && !isSlamming)
+                if (rb.velocity.y < -13 && !isSlamming)
                     playerAnimator.PlayerHardLanded();
             }
             else
@@ -198,11 +198,13 @@ public class PlayerMovement : MonoBehaviour
     private void Slam()
     {
         isSlamming = true;
+        playerAnimator.PlayerSlamming();
         SetPlayerGravityScale(defaultGravScale * slamGravScaleMultiplier);
         
         slamingCooldown = slamingCooldownTime;
         // Debug.Log(Mathf.Max(rb.velocity.y, -maxFallSpeed));
         firstHitSlam = true;
+        
     }
     public bool IsSlamming()
     {

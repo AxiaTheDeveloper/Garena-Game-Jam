@@ -17,7 +17,6 @@ public class EnemyShoot : MonoBehaviour
     {
         if(shootDelay > 0)
         {
-            Debug.Log(shootDelay);
             shootDelay -= Time.deltaTime;
         }
         
