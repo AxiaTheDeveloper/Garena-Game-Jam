@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 604d4e222286f2a4898faf04fbe0124d
+guid: 2bb9ba0bb7e1461498e3b58b833736ef
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -101,53 +101,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 29_x_34_BallRobot_Jump_0
+      name: 33_x_35_BallChar_Landed_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 29
-        height: 34
+        width: 33
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56925fce85fb7464b87e932c2c03d0b7
-      internalID: 151212052
+      spriteID: 8ad164a0a8bf3d04b8ed6eb72f0c9170
+      internalID: -1078959313
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 29_x_34_BallRobot_Jump_1
+      name: 33_x_35_BallChar_Landed_1
       rect:
         serializedVersion: 2
-        x: 29
+        x: 33
         y: 0
-        width: 29
-        height: 34
+        width: 33
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dff171210d1852547b7bd6eda189f8ee
-      internalID: 1973850560
+      spriteID: 27742b4f9e49ff147b25c0581ffeabe9
+      internalID: 1752562881
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 29_x_34_BallRobot_Jump_2
+      name: 33_x_35_BallChar_Landed_2
       rect:
         serializedVersion: 2
-        x: 58
+        x: 66
         y: 0
-        width: 29
-        height: 34
+        width: 33
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5bf5a5fb5a5517448986384dae45109
-      internalID: -155870476
+      spriteID: 40c97cc00ab337049b72f894c5408270
+      internalID: -539921467
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 29_x_34_BallRobot_Jump_3
+      name: 33_x_35_BallChar_Landed_3
       rect:
         serializedVersion: 2
-        x: 87
+        x: 99
         y: 0
-        width: 29
-        height: 34
+        width: 33
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9300cdb8c7f853945a76286b4b524d6e
-      internalID: -1659226284
+      spriteID: 0831f9c41094b4f4c90f0cd14b0295bc
+      internalID: -1432048535
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 29_x_34_BallRobot_Jump_4
+      name: 33_x_35_BallChar_Landed_4
       rect:
         serializedVersion: 2
-        x: 116
+        x: 132
         y: 0
-        width: 29
-        height: 34
+        width: 33
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,20 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12d7fd70ecbea7f4e9e10fc17054c5be
-      internalID: 501050178
+      spriteID: bdaf018566e06f64298c9a2b44753188
+      internalID: -265783409
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 29_x_34_BallRobot_Jump_5
+      name: 33_x_35_BallChar_Landed_5
       rect:
         serializedVersion: 2
-        x: 145
+        x: 165
         y: 0
-        width: 29
-        height: 34
+        width: 33
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -260,20 +224,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a645288b9a8f6c24b8dbe00282ce396e
-      internalID: -112863140
+      spriteID: c8991228ac7f54f42aaa58aa8f0099fe
+      internalID: 1968718516
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 29_x_34_BallRobot_Jump_6
+      name: 33_x_35_BallChar_Landed_6
       rect:
         serializedVersion: 2
-        x: 174
+        x: 198
         y: 0
-        width: 29
-        height: 34
+        width: 33
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,20 +245,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2dec210d1fb0d6f4298bc7d6b478e1a3
-      internalID: 190635234
+      spriteID: 6684228f3b9a7b94aad9a3f34b821560
+      internalID: 1889631875
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 29_x_34_BallRobot_Jump_7
+      name: 33_x_35_BallChar_Landed_7
       rect:
         serializedVersion: 2
-        x: 203
+        x: 231
         y: 0
-        width: 29
-        height: 34
+        width: 33
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -302,20 +266,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f4b5e1a557e1d540a81566016aedde3
-      internalID: 444372820
+      spriteID: affeb92cddbaf2b4d9d8ab98c5b0db40
+      internalID: 1626609146
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 29_x_34_BallRobot_Jump_8
+      name: 33_x_35_BallChar_Landed_8
       rect:
         serializedVersion: 2
-        x: 232
+        x: 264
         y: 0
-        width: 29
-        height: 34
+        width: 33
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -323,20 +287,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a73ce39406706f440a04ecbd6761659f
-      internalID: -776883596
+      spriteID: 02353c6ad4ccaef4bb331249ad8544a8
+      internalID: -1311726256
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 29_x_34_BallRobot_Jump_9
+      name: 33_x_35_BallChar_Landed_9
       rect:
         serializedVersion: 2
-        x: 261
+        x: 297
         y: 0
-        width: 29
-        height: 34
+        width: 33
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -344,20 +308,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52cd8b99815eab44182432ffb1479a31
-      internalID: 1307683023
+      spriteID: 31008806c05fa384aa4c046511f9030b
+      internalID: 1386276224
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 29_x_34_BallRobot_Jump_10
+      name: 33_x_35_BallChar_Landed_10
       rect:
         serializedVersion: 2
-        x: 290
+        x: 330
         y: 0
-        width: 29
-        height: 34
+        width: 33
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -365,20 +329,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd9d93661f6d1b3488769074ab5efd1c
-      internalID: -1773901520
+      spriteID: 60c53ec879e092c43807f7349227bd07
+      internalID: -584397209
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 29_x_34_BallRobot_Jump_11
+      name: 33_x_35_BallChar_Landed_11
       rect:
         serializedVersion: 2
-        x: 319
+        x: 363
         y: 0
-        width: 29
-        height: 34
+        width: 33
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -386,20 +350,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 602e1113c99d8354fa60b5e144e81f00
-      internalID: -1141003643
+      spriteID: 92b263bf12d79f040bdff75f38e088de
+      internalID: -731729401
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 29_x_34_BallRobot_Jump_12
+      name: 33_x_35_BallChar_Landed_12
       rect:
         serializedVersion: 2
-        x: 348
+        x: 396
         y: 0
-        width: 29
-        height: 34
+        width: 33
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -407,20 +371,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60f7d11e6f5ec3f4cb41818714611220
-      internalID: 815516117
+      spriteID: c5f8a603280f58c44b81b7ed8793c655
+      internalID: 43016962
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 29_x_34_BallRobot_Jump_13
+      name: 33_x_35_BallChar_Landed_13
       rect:
         serializedVersion: 2
-        x: 377
+        x: 429
         y: 0
-        width: 29
-        height: 34
+        width: 33
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -428,20 +392,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 619f840750830484f8f45b9ae643c802
-      internalID: 963053438
+      spriteID: 54214239995217d4b93486eeaba8843a
+      internalID: 1456383229
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 29_x_34_BallRobot_Jump_14
+      name: 33_x_35_BallChar_Landed_14
       rect:
         serializedVersion: 2
-        x: 406
+        x: 462
         y: 0
-        width: 29
-        height: 34
+        width: 33
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -449,20 +413,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9c1f4d602ad76c4a9bc3fbad06c648f
-      internalID: -2134763261
+      spriteID: 6e98ef9d8b35ee04389a586a53a40dce
+      internalID: 239457868
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 29_x_34_BallRobot_Jump_15
+      name: 33_x_35_BallChar_Landed_15
       rect:
         serializedVersion: 2
-        x: 435
+        x: 495
         y: 0
-        width: 29
-        height: 34
+        width: 33
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -470,20 +434,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49ccd0b4c65417e408eacc6601f36677
-      internalID: 2111741880
+      spriteID: c52d4033eaf271e48a2b2ec069e71127
+      internalID: -2102133092
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 29_x_34_BallRobot_Jump_16
+      name: 33_x_35_BallChar_Landed_16
       rect:
         serializedVersion: 2
-        x: 464
+        x: 528
         y: 0
-        width: 29
-        height: 34
+        width: 33
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -491,20 +455,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0b7b30862d6b88449b47c36b13b4403
-      internalID: -528920278
+      spriteID: 960ae2b396bcdd140aa493f7a9acc0e8
+      internalID: -985750362
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 29_x_34_BallRobot_Jump_17
+      name: 33_x_35_BallChar_Landed_17
       rect:
         serializedVersion: 2
-        x: 493
+        x: 561
         y: 0
-        width: 29
-        height: 34
+        width: 33
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -512,20 +476,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6824406a0b4555f419ad4aa9ccaf0c87
-      internalID: 731576263
+      spriteID: e7aedf3ee7f45b148938d811c11a09c5
+      internalID: 985533756
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 29_x_34_BallRobot_Jump_18
+      name: 33_x_35_BallChar_Landed_18
       rect:
         serializedVersion: 2
-        x: 522
+        x: 594
         y: 0
-        width: 29
-        height: 34
+        width: 33
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -533,8 +497,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2e6e5624816796498a24cbb1b4d52f1
-      internalID: 1700671803
+      spriteID: 64e507475a934f54485ce09629b6055b
+      internalID: -723342019
       vertices: []
       indices: 
       edges: []
@@ -550,25 +514,25 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      29_x_34_BallRobot_Jump_5: -112863140
-      29_x_34_BallRobot_Jump_7: 444372820
-      29_x_34_BallRobot_Jump_8: -776883596
-      29_x_34_BallRobot_Jump_16: -528920278
-      29_x_34_BallRobot_Jump_13: 963053438
-      29_x_34_BallRobot_Jump_3: -1659226284
-      29_x_34_BallRobot_Jump_15: 2111741880
-      29_x_34_BallRobot_Jump_18: 1700671803
-      29_x_34_BallRobot_Jump_11: -1141003643
-      29_x_34_BallRobot_Jump_2: -155870476
-      29_x_34_BallRobot_Jump_9: 1307683023
-      29_x_34_BallRobot_Jump_12: 815516117
-      29_x_34_BallRobot_Jump_10: -1773901520
-      29_x_34_BallRobot_Jump_14: -2134763261
-      29_x_34_BallRobot_Jump_17: 731576263
-      29_x_34_BallRobot_Jump_6: 190635234
-      29_x_34_BallRobot_Jump_4: 501050178
-      29_x_34_BallRobot_Jump_0: 151212052
-      29_x_34_BallRobot_Jump_1: 1973850560
+      33_x_35_BallChar_Landed_18: -723342019
+      33_x_35_BallChar_Landed_12: 43016962
+      33_x_35_BallChar_Landed_13: 1456383229
+      33_x_35_BallChar_Landed_7: 1626609146
+      33_x_35_BallChar_Landed_4: -265783409
+      33_x_35_BallChar_Landed_6: 1889631875
+      33_x_35_BallChar_Landed_8: -1311726256
+      33_x_35_BallChar_Landed_1: 1752562881
+      33_x_35_BallChar_Landed_9: 1386276224
+      33_x_35_BallChar_Landed_0: -1078959313
+      33_x_35_BallChar_Landed_15: -2102133092
+      33_x_35_BallChar_Landed_14: 239457868
+      33_x_35_BallChar_Landed_16: -985750362
+      33_x_35_BallChar_Landed_3: -1432048535
+      33_x_35_BallChar_Landed_10: -584397209
+      33_x_35_BallChar_Landed_17: 985533756
+      33_x_35_BallChar_Landed_5: 1968718516
+      33_x_35_BallChar_Landed_11: -731729401
+      33_x_35_BallChar_Landed_2: -539921467
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

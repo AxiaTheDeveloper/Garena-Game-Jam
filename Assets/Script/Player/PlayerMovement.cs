@@ -146,14 +146,17 @@ public class PlayerMovement : MonoBehaviour
                 SetPlayerGravityScale(defaultGravScale);
                 lastOnGroundTime = coyoteTime;
                 isOnGround = true;
+                if (rb.velocity.y < -5 && !isSlamming)
+                    playerAnimator.PlayerHardLanded();
             }
             else
             {
                 isOnGround = false;
             }
         }
-        if(isJumping && rb.velocity.y < 0)
+        if(rb.velocity.y < 0 && !isOnGround)
         {
+            Debug.Log("This");
             isJumping = false;
             playerAnimator.PlayerFall();
         }

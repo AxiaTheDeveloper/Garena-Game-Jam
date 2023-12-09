@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bfed4e6335038d747baa0ed7358454b8
+guid: 3dfae66c9ced54344ab04e6f9a9e4316
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -101,53 +101,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 33_x_28_BallRobot_Walk_0
+      name: 33_x_35_BallRobot_Falling_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 33
-        height: 28
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d10aca9b18691e143a1114564f9c31ab
-      internalID: -297659637
+      spriteID: f8e2b8623ac7f5542aaa59d4898ee177
+      internalID: 1941804994
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 33_x_28_BallRobot_Walk_1
+      name: 33_x_35_BallRobot_Falling_1
       rect:
         serializedVersion: 2
         x: 33
         y: 0
         width: 33
-        height: 28
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae37847dda9ca7642ad3338b676bf523
-      internalID: 646164571
+      spriteID: db3a1d5cba4e76b4ebff056c3b913259
+      internalID: 1109993367
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 33_x_28_BallRobot_Walk_2
+      name: 33_x_35_BallRobot_Falling_2
       rect:
         serializedVersion: 2
         x: 66
         y: 0
         width: 33
-        height: 28
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6251cb4ade0a8814787ec9b529bc6ae7
-      internalID: -756613582
+      spriteID: f9365e3bb8b554042908c775aaa032af
+      internalID: 977204232
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 33_x_28_BallRobot_Walk_3
+      name: 33_x_35_BallRobot_Falling_3
       rect:
         serializedVersion: 2
         x: 99
         y: 0
         width: 33
-        height: 28
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df92327be8c5e104fa4c2d9dc953c91d
-      internalID: -1582612376
+      spriteID: b9908b7e44a82d14dbba8b394c811811
+      internalID: 875547198
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 33_x_28_BallRobot_Walk_4
+      name: 33_x_35_BallRobot_Falling_4
       rect:
         serializedVersion: 2
         x: 132
         y: 0
         width: 33
-        height: 28
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,20 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 727aac9ead769ae4d836cb2c13a3fa9b
-      internalID: 1854581137
+      spriteID: d0070eb989bcfdd4799b33771f558347
+      internalID: -283888877
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 33_x_28_BallRobot_Walk_5
+      name: 33_x_35_BallRobot_Falling_5
       rect:
         serializedVersion: 2
         x: 165
         y: 0
         width: 33
-        height: 28
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -260,20 +224,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee3a9588077f98e48923406b784c82c6
-      internalID: 287888825
+      spriteID: 4f5a34d473b8a0748a4834c818ebe661
+      internalID: -777713006
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 33_x_28_BallRobot_Walk_6
+      name: 33_x_35_BallRobot_Falling_6
       rect:
         serializedVersion: 2
         x: 198
         y: 0
         width: 33
-        height: 28
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,20 +245,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8744bc5f468552549aae4856339882d4
-      internalID: 1515597330
+      spriteID: f431976ad99eb9643947f31cef1afbd0
+      internalID: -1861047441
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 33_x_28_BallRobot_Walk_7
+      name: 33_x_35_BallRobot_Falling_7
       rect:
         serializedVersion: 2
         x: 231
         y: 0
         width: 33
-        height: 28
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -302,20 +266,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7dd28ce5dc3241442b37bf9803103d9a
-      internalID: -966253796
+      spriteID: 3585744c534de254a8f8b0567cd2d9d3
+      internalID: -295028969
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 33_x_28_BallRobot_Walk_8
+      name: 33_x_35_BallRobot_Falling_8
       rect:
         serializedVersion: 2
         x: 264
         y: 0
         width: 33
-        height: 28
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -323,134 +287,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ad7c4b23c020474f8e6d56d7f55ae26
-      internalID: 1362113288
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 33_x_28_BallRobot_Walk_9
-      rect:
-        serializedVersion: 2
-        x: 297
-        y: 0
-        width: 33
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 993708c81d2eede438feea1645f0c920
-      internalID: 806918543
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 33_x_28_BallRobot_Walk_10
-      rect:
-        serializedVersion: 2
-        x: 330
-        y: 0
-        width: 33
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0c9608ca96206d6429db5e130124b223
-      internalID: -988891573
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 33_x_28_BallRobot_Walk_11
-      rect:
-        serializedVersion: 2
-        x: 363
-        y: 0
-        width: 33
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f64a4fb1c663cea48a4e03548d7e5b9f
-      internalID: 1432717687
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 33_x_28_BallRobot_Walk_12
-      rect:
-        serializedVersion: 2
-        x: 396
-        y: 0
-        width: 33
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 10044f95f496f53409e9f78cb906a804
-      internalID: -965053351
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 33_x_28_BallRobot_Walk_13
-      rect:
-        serializedVersion: 2
-        x: 429
-        y: 0
-        width: 33
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a541b31fde4cb974aaf50014ebacad9b
-      internalID: 535735483
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 33_x_28_BallRobot_Walk_14
-      rect:
-        serializedVersion: 2
-        x: 462
-        y: 0
-        width: 33
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7f8023ff7a4acb8439aa84a416f72a51
-      internalID: 356653186
+      spriteID: b61cd083c6ea196438708aa00e8f9558
+      internalID: -2007017804
       vertices: []
       indices: 
       edges: []
@@ -466,21 +304,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      33_x_28_BallRobot_Walk_14: 356653186
-      33_x_28_BallRobot_Walk_4: 1854581137
-      33_x_28_BallRobot_Walk_12: -965053351
-      33_x_28_BallRobot_Walk_1: 646164571
-      33_x_28_BallRobot_Walk_3: -1582612376
-      33_x_28_BallRobot_Walk_0: -297659637
-      33_x_28_BallRobot_Walk_9: 806918543
-      33_x_28_BallRobot_Walk_10: -988891573
-      33_x_28_BallRobot_Walk_11: 1432717687
-      33_x_28_BallRobot_Walk_5: 287888825
-      33_x_28_BallRobot_Walk_2: -756613582
-      33_x_28_BallRobot_Walk_13: 535735483
-      33_x_28_BallRobot_Walk_7: -966253796
-      33_x_28_BallRobot_Walk_6: 1515597330
-      33_x_28_BallRobot_Walk_8: 1362113288
+      33_x_35_BallRobot_Falling_1: 1109993367
+      33_x_35_BallRobot_Falling_0: 1941804994
+      33_x_35_BallRobot_Falling_4: -283888877
+      33_x_35_BallRobot_Falling_2: 977204232
+      33_x_35_BallRobot_Falling_6: -1861047441
+      33_x_35_BallRobot_Falling_3: 875547198
+      33_x_35_BallRobot_Falling_5: -777713006
+      33_x_35_BallRobot_Falling_8: -2007017804
+      33_x_35_BallRobot_Falling_7: -295028969
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
