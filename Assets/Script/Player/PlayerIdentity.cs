@@ -8,9 +8,14 @@ public class PlayerIdentity : MonoBehaviour
     [SerializeField]private int playerHeightNow;
     [SerializeField]private PlayerMovement playerMovement;
     [SerializeField]private PlayerAnimator playerAnimator;
+    [SerializeField]private float startHeight_m, totalHeight;
     private void Awake() {
         playerMovement = GetComponent<PlayerMovement>();
         Instance = this;
+    }
+    private void Update() 
+    {
+        totalHeight = transform.position.y - startHeight_m;
     }
     public int PlayerHeight()
     {
@@ -35,5 +40,9 @@ public class PlayerIdentity : MonoBehaviour
     {
         playerAnimator.DieAnimation();
         // GameManager.Instance.Death();
+    }
+    public float GetHeight()
+    {
+        return totalHeight;
     }
 }

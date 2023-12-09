@@ -8,10 +8,12 @@ public class PlatformIdentity : MonoBehaviour
     [SerializeField]private AreaEffector2D areaEffector2D;
     [SerializeField]private bool isWindy, isLeft, isDoing;
     [SerializeField]private float magnitudes, variations, moveDirectionTimerMax, moveDirectionTimer, waitTimerMax, waitTimer;
-    public void ChangeAreaEffector2D(float magnitude, float variation)
+    public void ChangeAreaEffector2D(float magnitude, float variation, float moveDirectionTimer, float waitTimer)
     {
         magnitudes = magnitude;
         variations = variation;
+        moveDirectionTimerMax = moveDirectionTimer;
+        waitTimerMax = waitTimer;
     }
     public void ChangePlatformHeight(int newPH)
     {

@@ -50,7 +50,8 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.CompareTag("Player"))
         {
-            other.GetComponent<PlayerIdentity>().Death();
+            if(!PlayerMovement.Instance.IsSlamming())other.GetComponent<PlayerIdentity>().Death();
+            
         }
         if(other.gameObject.CompareTag("Player")|| other.gameObject.CompareTag("Ground"))
         {

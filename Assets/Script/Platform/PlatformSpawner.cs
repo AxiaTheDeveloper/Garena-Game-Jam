@@ -9,7 +9,7 @@ public class PlatformSpawner : MonoBehaviour
     [SerializeField]private float heightNow, heightAdd;
     [SerializeField]private int startHeight, totalHeight, lastRandomNumber;
     [SerializeField]private GameObject parent;
-    [SerializeField]private float magnitude, variation;
+    [SerializeField]private float magnitude, variation, waitTimer, moveDirectionTimer;
     private void Awake() 
     {
         Instance = this;
@@ -86,7 +86,7 @@ public class PlatformSpawner : MonoBehaviour
             if(tahapPlatform == 3 || tahapPlatform == 4 || tahapPlatform == 5)
             {
                 platformIdentity.IsWindy();
-                platformIdentity.ChangeAreaEffector2D(magnitude, variation);
+                platformIdentity.ChangeAreaEffector2D(magnitude, variation, moveDirectionTimer, waitTimer);
             }
         }
     }

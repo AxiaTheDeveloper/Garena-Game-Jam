@@ -3,9 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
+using System;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static PlayerMovement Instance {get;private set;}
     [Header("Hal Penting")]
     [SerializeField]private GameInput gameInput;
     [SerializeField]private Rigidbody2D rb;
@@ -18,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]private Vector2 moveDirection;
     [SerializeField]private float accelerate, deccelerate, moveFriction;
     [Header("Player Movement Vertical")]
+    private int counterJump = 0;
     [SerializeField]private float jumpForce;
     [SerializeField]private Vector2 checkGroundSize;
     [SerializeField]private bool isOnGround, isJumping, isJumpCut;
@@ -34,10 +37,11 @@ public class PlayerMovement : MonoBehaviour
     private CinemachineBasicMultiChannelPerlin cinemachineBasicMultiChannelPerlin;
     [SerializeField] private float intensityAmp;
     [SerializeField] private float timeForShake;
-
+    [SerializeField]private Vector3 tempVelocity;
 
     private void Awake()
     {
+        Instance = this;
         rb = GetComponent<Rigidbody2D>();
         cinemachineVirtualCamera = cinemachine.GetComponent<CinemachineVirtualCamera>();
         cinemachineBasicMultiChannelPerlin = cinemachineVirtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
@@ -49,6 +53,23 @@ public class PlayerMovement : MonoBehaviour
     {
         if(!gameManager)gameManager = GameManager.Instance;
         if(!gameInput)gameInput = GameInput.Instance;
+        gameManager.OnPause += gameManager_OnPause;
+        gameManager.OnUnPause += gameManager_OnUnPause;
+        
+    }
+
+    private void gameManager_OnUnPause(object sender, EventArgs e)
+    {
+        rb.constraints = RigidbodyConstraints2D.None;
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        rb.velocity = tempVelocity;
+    }
+
+    private void gameManager_OnPause(object sender, EventArgs e)
+    {
+        tempVelocity = rb.velocity;
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
+         
     }
 
     void UpdateIntensity(float intensity)
@@ -77,7 +98,7 @@ public class PlayerMovement : MonoBehaviour
                     rb.velocity = new Vector2(rb.velocity.x, Mathf.Max(rb.velocity.y, -maxFallSpeed));
                     if(moveDirection != Vector2.zero)moveDirection = Vector2.zero;
                     slamingCooldown-= Time.deltaTime;
-                    if(slamingCooldown <= 0 && !playerAnimator.GetUnstuck())isSlamming = false;
+                    if(slamingCooldown <= 0 && !playerAnimator.GetUnstuck())isSlamming = false;//mslh lagi :D
                 }
                 else
                 {
@@ -104,6 +125,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 playerAnimator.PlayerWalk(false);
             }
+            
         }
         
         
@@ -215,6 +237,7 @@ public class PlayerMovement : MonoBehaviour
             }
             rb.velocity = new Vector2(rb.velocity.x, 0);
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            counterJump++;
             playerAnimator.PlayerJump();
 
             isJumping = true;
@@ -252,8 +275,12 @@ public class PlayerMovement : MonoBehaviour
     {
         return isSlamming;
     }
-    public void ChangeJumpForce(int change)
+    public void ChangeJumpForce(float change)
     {
         jumpForce *= change;
+    }
+    public int GetCounterJump()
+    {
+        return counterJump;
     }
 }
