@@ -1,5 +1,7 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -25,10 +27,22 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]private bool isSlamming, firstHitSlam;
     [SerializeField]private float slamGravScaleMultiplier, slamingCooldownTime, slamingCooldown;
     [SerializeField]private GameObject slamAttack;
-    
-    private void Awake() 
+
+    [Header("CameraShaking")]
+    [SerializeField] private GameObject cinemachine;
+    private CinemachineVirtualCamera cinemachineVirtualCamera;
+    private CinemachineBasicMultiChannelPerlin cinemachineBasicMultiChannelPerlin;
+    [SerializeField] private float intensityAmp;
+    [SerializeField] private float timeForShake;
+
+
+    private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        cinemachineVirtualCamera = cinemachine.GetComponent<CinemachineVirtualCamera>();
+        cinemachineBasicMultiChannelPerlin = cinemachineVirtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+        cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = 0;
+        cinemachineBasicMultiChannelPerlin.m_FrequencyGain = 0;
     }
 
     private void Start() 
@@ -36,6 +50,12 @@ public class PlayerMovement : MonoBehaviour
         if(!gameManager)gameManager = GameManager.Instance;
         if(!gameInput)gameInput = GameInput.Instance;
     }
+
+    void UpdateIntensity(float intensity)
+    {
+        cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = intensity;
+    }
+
     private void Update() 
     {
         if(gameManager.StateGame() == GameManager.GameStates.GameStart)
@@ -49,6 +69,9 @@ public class PlayerMovement : MonoBehaviour
                     {
                         firstHitSlam = false;
                         playerAnimator.PlaySlamStuck();
+                        cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = intensityAmp;
+                        cinemachineBasicMultiChannelPerlin.m_FrequencyGain = intensityAmp;
+                        LeanTween.value(cinemachine, UpdateIntensity, intensityAmp, 0, timeForShake);
                         StartCoroutine(SlamAttack());
                     }
                     rb.velocity = new Vector2(rb.velocity.x, Mathf.Max(rb.velocity.y, -maxFallSpeed));
