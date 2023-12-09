@@ -27,8 +27,13 @@ public class PlayerIdentity : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Enemy"))
         {
-            if(!playerMovement.IsSlamming())Debug.Log("Dead");
+            if(!playerMovement.IsSlamming())Death();
             
         }
+    }
+    public void Death()
+    {
+        //play animation
+        //play fade ui
     }
 }

@@ -26,7 +26,7 @@ public class Lava : MonoBehaviour
         }
         else if(other.gameObject.CompareTag("Player"))
         {
-            Destroy(other.gameObject);
+            other.GetComponent<PlayerIdentity>().Death();
             //keluar player diedd
         }
     }
