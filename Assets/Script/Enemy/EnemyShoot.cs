@@ -17,6 +17,7 @@ public class EnemyShoot : MonoBehaviour
     {
         if(shootDelay > 0)
         {
+            // Debug.Log(shootDelay);
             shootDelay -= Time.deltaTime;
         }
         
@@ -43,7 +44,7 @@ public class EnemyShoot : MonoBehaviour
             canShoot = false;
             if(bullets == null || bullets.Count != totalBullet)
             {
-                Debug.Log("HEEEsY");
+                // Debug.Log("HEEEsY");
                 Transform bullet = Instantiate(bulletPrefab, this.gameObject.transform);
                 bullet.transform.position = transform.position;
                 bullets.Add(bullet);
@@ -55,7 +56,7 @@ public class EnemyShoot : MonoBehaviour
             }
             else
             {
-                Debug.Log("HEEEY");
+                // Debug.Log("HEEEY");
                 bullets[bulletNumber].transform.position = transform.position;
                 bullets[bulletNumber].GetComponent<Bullet>().ShootBullet((int)transform.localScale.x);
                 shootDelay = shootDelayTime;

@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class PlayerIdentity : MonoBehaviour
 {
+    public static PlayerIdentity Instance{get; private set;}
     [SerializeField]private int playerHeightNow;
     [SerializeField]private PlayerMovement playerMovement;
     private void Awake() {
         playerMovement = GetComponent<PlayerMovement>();
+        Instance = this;
     }
     public int PlayerHeight()
     {
