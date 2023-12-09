@@ -160,7 +160,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if(rb.velocity.y < 0 && !isOnGround)
         {
-            Debug.Log("This");
+            // Debug.Log("This");
             
             playerAnimator.PlayerFall();
         }
@@ -212,5 +212,9 @@ public class PlayerMovement : MonoBehaviour
     public bool IsSlamming()
     {
         return isSlamming;
+    }
+    public void ChangeJumpForce(int change)
+    {
+        jumpForce *= change;
     }
 }
