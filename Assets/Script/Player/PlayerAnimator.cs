@@ -12,6 +12,7 @@ public class PlayerAnimator : MonoBehaviour
     [SerializeField] private bool isJumping;
     [SerializeField] private bool playerHardLanded;
     [SerializeField] private bool isNotSlamming;
+    [SerializeField] private bool isStuck;
     [SerializeField] private ParticleSystem particleEffectLanding;
     [SerializeField] private ParticleSystem particleEffectSlam;
 
@@ -23,7 +24,7 @@ public class PlayerAnimator : MonoBehaviour
 
     private void Update()
     {
-        if (isFalling && !runOnceFalling && isNotSlamming)
+        if (isFalling && !runOnceFalling && isNotSlamming && !isStuck)
         {
             animator.Play("Falling");
             runOnceFalling = true;
@@ -36,7 +37,7 @@ public class PlayerAnimator : MonoBehaviour
     }
     public void PlayerWalk(bool change)
     {
-        if (!this.animator.GetCurrentAnimatorStateInfo(0).IsName("Landed"))
+        if (!this.animator.GetCurrentAnimatorStateInfo(0).IsName("Landed") && !isStuck)
         {
             if (change && !isFalling && !isJumping)
                 animator.Play("Walk");
@@ -84,5 +85,26 @@ public class PlayerAnimator : MonoBehaviour
     public void PlayParticleEffectSlam()
     {
         particleEffectSlam.Play();
+    }
+
+    public void PlaySlamStuck()
+    {
+        isStuck = true;
+        Debug.Log("Calleddddddddd");
+        animator.Play("SlamStuck");
+    }
+    public void PlaySlamWakeUp()
+    {
+        animator.Play("SlamUnStuck");
+    }
+
+    public void UnStuck()
+    {
+        isStuck = false;
+    }
+
+    public bool GetUnstuck()
+    {
+        return isStuck;
     }
 }

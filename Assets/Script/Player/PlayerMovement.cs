@@ -40,15 +40,17 @@ public class PlayerMovement : MonoBehaviour
         {
             if(isSlamming)
             {
+
                 if(firstHitSlam)
                 {
                     firstHitSlam = false;
+                    playerAnimator.PlaySlamStuck();
                     StartCoroutine(SlamAttack());
                 }
                 rb.velocity = new Vector2(rb.velocity.x, Mathf.Max(rb.velocity.y, -maxFallSpeed));
                 if(moveDirection != Vector2.zero)moveDirection = Vector2.zero;
                 slamingCooldown-= Time.deltaTime;
-                if(slamingCooldown <= 0)isSlamming = false;
+                if(slamingCooldown <= 0 && !playerAnimator.GetUnstuck())isSlamming = false;
             }
             else
             {
