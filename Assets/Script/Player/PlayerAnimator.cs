@@ -15,11 +15,13 @@ public class PlayerAnimator : MonoBehaviour
     [SerializeField] private bool isStuck;
     [SerializeField] private ParticleSystem particleEffectLanding;
     [SerializeField] private ParticleSystem particleEffectSlam;
+    [SerializeField] private PlayerAttack playerAttackCollider;
 
     private void Awake()
     {
         particleEffectLanding = gameObject.transform.parent.gameObject.transform.GetChild(2).gameObject.transform.GetChild(0).gameObject.GetComponent<ParticleSystem>();
         particleEffectSlam = gameObject.transform.parent.gameObject.transform.GetChild(2).gameObject.transform.GetChild(1).gameObject.GetComponent<ParticleSystem>();
+        playerAttackCollider = gameObject.transform.parent.gameObject.transform.GetChild(1).gameObject.GetComponent<PlayerAttack>();
     }
 
     private void Update()
@@ -84,6 +86,8 @@ public class PlayerAnimator : MonoBehaviour
     }
     public void PlayParticleEffectSlam()
     {
+        var theShape = particleEffectSlam.shape;
+        theShape.radius = playerAttackCollider.getRadius();
         particleEffectSlam.Play();
     }
 
