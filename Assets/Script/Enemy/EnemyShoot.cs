@@ -15,26 +15,31 @@ public class EnemyShoot : MonoBehaviour
     }
     private void Update() 
     {
-        if(shootDelay > 0)
+        if(GameManager.Instance.StateGame() == GameManager.GameStates.GameStart)
         {
-            // Debug.Log(shootDelay);
-            shootDelay -= Time.deltaTime;
-        }
-        
-        else
-        {
+            if(shootDelay > 0)
             {
-                canShoot = true;
+                // Debug.Log(shootDelay);
+                shootDelay -= Time.deltaTime;
+
+            }
+            
+            else
+            {
+                {
+                    canShoot = true;
+                }
+            }
+            Shoot();
+            if(canStartCoolDownNow)
+            {
+                canStartCoolDownNow = false;
+                // canShoot = true;
+                bulletNumber = 0;
+                shootDelay = shootDelayTime;
             }
         }
-        Shoot();
-        if(canStartCoolDownNow)
-        {
-            canStartCoolDownNow = false;
-            // canShoot = true;
-            bulletNumber = 0;
-            shootDelay = shootDelayTime;
-        }
+        
     }
     public void Shoot()
     {

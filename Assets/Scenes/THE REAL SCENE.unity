@@ -1349,6 +1349,7 @@ MonoBehaviour:
   isStuck: 0
   particleEffectLanding: {fileID: 0}
   particleEffectSlam: {fileID: 0}
+  playerAttackCollider: {fileID: 0}
 --- !u!114 &1161183393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1678,7 +1679,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 10.58
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -2170,14 +2171,14 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 10
+    type: 12
     angle: 25.06
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
-    m_Rotation: {x: 0, y: 0, z: 189.66444}
+    m_Rotation: {x: -0, y: 0, z: 180}
     m_Scale: {x: 1, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
@@ -2253,11 +2254,11 @@ ParticleSystem:
     m_TextureColorAffectsParticles: 1
     m_TextureAlphaAffectsParticles: 1
     m_TextureBilinearFiltering: 0
-    randomDirectionAmount: 0
-    sphericalDirectionAmount: 0.61
+    randomDirectionAmount: 0.89
+    sphericalDirectionAmount: 0.5
     randomPositionAmount: 0
     radius:
-      value: 0.3
+      value: 24.19
       mode: 0
       spread: 0
       speed:
@@ -2486,7 +2487,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 30
+        scalar: 95.4
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -3587,7 +3588,7 @@ ParticleSystem:
     speedModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -5245,7 +5246,7 @@ ParticleSystem:
     m_Bounce:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 1
       minScalar: 1
       maxCurve:
         serializedVersion: 2

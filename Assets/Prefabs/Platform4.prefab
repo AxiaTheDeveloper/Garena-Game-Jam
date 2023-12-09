@@ -48,7 +48,7 @@ AreaEffector2D:
     m_Bits: 127
   m_UseGlobalAngle: 0
   m_ForceAngle: 0
-  m_ForceMagnitude: 10
+  m_ForceMagnitude: 0
   m_ForceVariation: 0
   m_ForceTarget: 0
   m_Drag: 0
@@ -791,6 +791,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platformHeight: 4
   areaEffector2D: {fileID: 5625919814642676574}
+  isWindy: 0
+  isLeft: 0
+  magnitudes: 0
+  variations: 0
 --- !u!61 &4250897221261279112
 BoxCollider2D:
   m_ObjectHideFlags: 0
