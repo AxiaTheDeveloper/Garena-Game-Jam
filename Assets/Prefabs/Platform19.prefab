@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5374874210260897886}
   m_Layer: 0
   m_Name: Area Effector
-  m_TagString: Untagged
+  m_TagString: AreaEffector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

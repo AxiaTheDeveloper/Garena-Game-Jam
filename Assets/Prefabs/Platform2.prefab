@@ -632,6 +632,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platformHeight: 2
   areaEffector2D: {fileID: 2290038591489920890}
+  isWindy: 0
+  isLeft: 0
+  magnitudes: 0
+  variations: 0
 --- !u!61 &2302576550093108269
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -697,7 +701,7 @@ GameObject:
   - component: {fileID: 8614800107305189381}
   m_Layer: 0
   m_Name: Area Effector
-  m_TagString: Untagged
+  m_TagString: AreaEffector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
