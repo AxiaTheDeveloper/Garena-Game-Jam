@@ -9,6 +9,7 @@ public class PlatformSpawner : MonoBehaviour
     [SerializeField]private float heightNow, heightAdd;
     [SerializeField]private int startHeight, totalHeight, lastRandomNumber;
     [SerializeField]private GameObject parent;
+    [SerializeField]private float magnitude, variation;
     private void Awake() 
     {
         Instance = this;
@@ -22,21 +23,41 @@ public class PlatformSpawner : MonoBehaviour
         {
             int maxLength = 0, minLength = 0;
             int tahapPlatform = 0;
-            if(totalHeight/10 == 0)
+            //mau jadi per lima aja?
+
+            if(totalHeight/5 == 0)
             {
                 tahapPlatform = 0;
                 minLength = 0;
                 maxLength = 9;
             }
-            else if(totalHeight/10 == 1)
+            else if(totalHeight/5 == 1)
             {
                 tahapPlatform = 1;
                 minLength = 9;
                 maxLength = 18;
             }
-            else if(totalHeight/10 == 2)
+            else if(totalHeight/5 == 2)
             {
                 tahapPlatform = 2;
+                minLength = 4;
+                maxLength = platformsPrefab.Length;
+            }
+            else if(totalHeight/5 == 3)
+            {
+                tahapPlatform = 3;
+                minLength = 0;
+                maxLength = 9;
+            }
+            else if(totalHeight/5 == 4)
+            {
+                tahapPlatform = 4;
+                minLength = 9;
+                maxLength = 18;
+            }
+            else if(totalHeight/5 == 5)
+            {
+                tahapPlatform = 5;
                 minLength = 4;
                 maxLength = platformsPrefab.Length;
             }
@@ -60,7 +81,13 @@ public class PlatformSpawner : MonoBehaviour
             // Debug.Log(newPlatform.transform.localPosition);
             heightNow += heightAdd;
             totalHeight++;
-            newPlatform.GetComponent<PlatformIdentity>().ChangePlatformHeight(totalHeight);
+            PlatformIdentity platformIdentity = newPlatform.GetComponent<PlatformIdentity>();
+            platformIdentity.ChangePlatformHeight(totalHeight);
+            if(tahapPlatform == 3 || tahapPlatform == 4 || tahapPlatform == 5)
+            {
+                platformIdentity.IsWindy();
+                platformIdentity.ChangeAreaEffector2D(magnitude, variation);
+            }
         }
     }
     public int GetTotalHeight()
