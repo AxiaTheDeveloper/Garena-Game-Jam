@@ -388,6 +388,8 @@ GameObject:
   - component: {fileID: 317491875}
   - component: {fileID: 317491877}
   - component: {fileID: 317491876}
+  - component: {fileID: 317491878}
+  - component: {fileID: 317491879}
   m_Layer: 0
   m_Name: Platform16
   m_TagString: Untagged
@@ -702,7 +704,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 14
-      m_TileSpriteIndex: 14
+      m_TileSpriteIndex: 22
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -901,8 +903,8 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: -889481442, guid: 99e2db6579e3ca2428fc818e8b65aba0, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 4
     m_Data: {fileID: 1994329879, guid: 99e2db6579e3ca2428fc818e8b65aba0, type: 3}
   - m_RefCount: 2
@@ -917,8 +919,8 @@ Tilemap:
     m_Data: {fileID: -530658419, guid: 99e2db6579e3ca2428fc818e8b65aba0, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -470010558, guid: 99e2db6579e3ca2428fc818e8b65aba0, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -889481442, guid: 99e2db6579e3ca2428fc818e8b65aba0, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 2075382489, guid: 99e2db6579e3ca2428fc818e8b65aba0, type: 3}
   - m_RefCount: 4
@@ -971,6 +973,35 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &317491878
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317491874}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
+--- !u!114 &317491879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317491874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 263750853b408dd4281f8f075f85b16a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformHeight: 0
 --- !u!1 &375083485
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,6 +1013,8 @@ GameObject:
   - component: {fileID: 375083486}
   - component: {fileID: 375083488}
   - component: {fileID: 375083487}
+  - component: {fileID: 375083489}
+  - component: {fileID: 375083490}
   m_Layer: 0
   m_Name: Platform18
   m_TagString: Untagged
@@ -1406,7 +1439,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 4
-      m_TileSpriteIndex: 4
+      m_TileSpriteIndex: 13
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1863,8 +1896,8 @@ Tilemap:
     m_Data: {fileID: 217534183, guid: 99e2db6579e3ca2428fc818e8b65aba0, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: -1492749933, guid: 99e2db6579e3ca2428fc818e8b65aba0, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -381707976, guid: 99e2db6579e3ca2428fc818e8b65aba0, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 1
@@ -1881,8 +1914,8 @@ Tilemap:
     m_Data: {fileID: 373734930, guid: 99e2db6579e3ca2428fc818e8b65aba0, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 802391381, guid: 99e2db6579e3ca2428fc818e8b65aba0, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -381707976, guid: 99e2db6579e3ca2428fc818e8b65aba0, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -280398545, guid: 99e2db6579e3ca2428fc818e8b65aba0, type: 3}
   - m_RefCount: 2
@@ -1981,6 +2014,35 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &375083489
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375083485}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
+--- !u!114 &375083490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375083485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 263750853b408dd4281f8f075f85b16a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformHeight: 0
 --- !u!1 &408836864
 GameObject:
   m_ObjectHideFlags: 0
@@ -1992,6 +2054,8 @@ GameObject:
   - component: {fileID: 408836865}
   - component: {fileID: 408836867}
   - component: {fileID: 408836866}
+  - component: {fileID: 408836868}
+  - component: {fileID: 408836869}
   m_Layer: 0
   m_Name: Platform13
   m_TagString: Untagged
@@ -2675,6 +2739,35 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &408836868
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408836864}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
+--- !u!114 &408836869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408836864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 263750853b408dd4281f8f075f85b16a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformHeight: 0
 --- !u!1 &425292767
 GameObject:
   m_ObjectHideFlags: 0
@@ -2686,6 +2779,8 @@ GameObject:
   - component: {fileID: 425292768}
   - component: {fileID: 425292770}
   - component: {fileID: 425292769}
+  - component: {fileID: 425292771}
+  - component: {fileID: 425292772}
   m_Layer: 0
   m_Name: Platform22
   m_TagString: Untagged
@@ -3339,6 +3434,35 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &425292771
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425292767}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
+--- !u!114 &425292772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425292767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 263750853b408dd4281f8f075f85b16a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformHeight: 0
 --- !u!1 &454867790
 GameObject:
   m_ObjectHideFlags: 0
@@ -3821,6 +3945,8 @@ GameObject:
   - component: {fileID: 641625067}
   - component: {fileID: 641625069}
   - component: {fileID: 641625068}
+  - component: {fileID: 641625070}
+  - component: {fileID: 641625071}
   m_Layer: 0
   m_Name: Platform15
   m_TagString: Untagged
@@ -4424,6 +4550,35 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &641625070
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641625066}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
+--- !u!114 &641625071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641625066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 263750853b408dd4281f8f075f85b16a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformHeight: 0
 --- !u!1 &796928412
 GameObject:
   m_ObjectHideFlags: 0
@@ -4435,6 +4590,8 @@ GameObject:
   - component: {fileID: 796928413}
   - component: {fileID: 796928415}
   - component: {fileID: 796928414}
+  - component: {fileID: 796928416}
+  - component: {fileID: 796928417}
   m_Layer: 0
   m_Name: Platform21
   m_TagString: Untagged
@@ -5088,6 +5245,35 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &796928416
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796928412}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
+--- !u!114 &796928417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796928412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 263750853b408dd4281f8f075f85b16a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformHeight: 0
 --- !u!1 &871214913
 GameObject:
   m_ObjectHideFlags: 0
@@ -5254,6 +5440,8 @@ GameObject:
   - component: {fileID: 943277636}
   - component: {fileID: 943277638}
   - component: {fileID: 943277637}
+  - component: {fileID: 943277639}
+  - component: {fileID: 943277640}
   m_Layer: 0
   m_Name: Platform17
   m_TagString: Untagged
@@ -5498,7 +5686,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 18
-      m_TileSpriteIndex: 16
+      m_TileSpriteIndex: 21
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -5791,8 +5979,8 @@ Tilemap:
     m_Data: {fileID: 927520914, guid: 99e2db6579e3ca2428fc818e8b65aba0, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: -1235837710, guid: 99e2db6579e3ca2428fc818e8b65aba0, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -1149175819, guid: 99e2db6579e3ca2428fc818e8b65aba0, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: 2055518849, guid: 99e2db6579e3ca2428fc818e8b65aba0, type: 3}
   - m_RefCount: 2
@@ -5801,8 +5989,8 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -1149175819, guid: 99e2db6579e3ca2428fc818e8b65aba0, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: -530658419, guid: 99e2db6579e3ca2428fc818e8b65aba0, type: 3}
   - m_RefCount: 2
@@ -5857,6 +6045,35 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &943277639
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943277635}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
+--- !u!114 &943277640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943277635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 263750853b408dd4281f8f075f85b16a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformHeight: 0
 --- !u!1 &992295968
 GameObject:
   m_ObjectHideFlags: 0
@@ -5868,6 +6085,8 @@ GameObject:
   - component: {fileID: 992295969}
   - component: {fileID: 992295971}
   - component: {fileID: 992295970}
+  - component: {fileID: 992295972}
+  - component: {fileID: 992295973}
   m_Layer: 0
   m_Name: Platform11
   m_TagString: Untagged
@@ -6491,6 +6710,35 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &992295972
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992295968}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
+--- !u!114 &992295973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992295968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 263750853b408dd4281f8f075f85b16a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformHeight: 0
 --- !u!1 &1051140082
 GameObject:
   m_ObjectHideFlags: 0
@@ -7047,6 +7295,8 @@ GameObject:
   - component: {fileID: 1130177619}
   - component: {fileID: 1130177621}
   - component: {fileID: 1130177620}
+  - component: {fileID: 1130177622}
+  - component: {fileID: 1130177623}
   m_Layer: 0
   m_Name: Platform20
   m_TagString: Untagged
@@ -7127,16 +7377,6 @@ Tilemap:
   m_GameObject: {fileID: 1130177618}
   m_Enabled: 1
   m_Tiles:
-  - first: {x: 7, y: -7, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 25
-      m_TileSpriteIndex: 18
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: -8, y: -6, z: 0}
     second:
       serializedVersion: 2
@@ -7629,7 +7869,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 642415fdcfdf4674a8aee81e573dd6af, type: 2}
   - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: f76215ea95d14ab40856fa7c98e85caa, type: 2}
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: bcfaf433093db2a4a897ac27f954728a, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 2
@@ -7668,7 +7908,7 @@ Tilemap:
     m_Data: {fileID: 2055518849, guid: 99e2db6579e3ca2428fc818e8b65aba0, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 441556626, guid: 99e2db6579e3ca2428fc818e8b65aba0, type: 3}
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {fileID: 373734930, guid: 99e2db6579e3ca2428fc818e8b65aba0, type: 3}
   - m_RefCount: 4
     m_Data: {fileID: 1994329879, guid: 99e2db6579e3ca2428fc818e8b65aba0, type: 3}
@@ -7685,7 +7925,7 @@ Tilemap:
   - m_RefCount: 2
     m_Data: {fileID: -1449655888, guid: 99e2db6579e3ca2428fc818e8b65aba0, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 45
+  - m_RefCount: 44
     m_Data:
       e00: 1
       e01: 0
@@ -7704,7 +7944,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 45
+  - m_RefCount: 44
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -7730,6 +7970,35 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &1130177622
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130177618}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
+--- !u!114 &1130177623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130177618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 263750853b408dd4281f8f075f85b16a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformHeight: 0
 --- !u!1 &1145967872
 GameObject:
   m_ObjectHideFlags: 0
@@ -7741,6 +8010,8 @@ GameObject:
   - component: {fileID: 1145967873}
   - component: {fileID: 1145967875}
   - component: {fileID: 1145967874}
+  - component: {fileID: 1145967876}
+  - component: {fileID: 1145967877}
   m_Layer: 0
   m_Name: Platform19
   m_TagString: Untagged
@@ -8554,6 +8825,35 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &1145967876
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145967872}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
+--- !u!114 &1145967877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145967872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 263750853b408dd4281f8f075f85b16a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformHeight: 0
 --- !u!1 &1161183388
 GameObject:
   m_ObjectHideFlags: 0
@@ -13983,6 +14283,8 @@ GameObject:
   - component: {fileID: 1789334346}
   - component: {fileID: 1789334348}
   - component: {fileID: 1789334347}
+  - component: {fileID: 1789334349}
+  - component: {fileID: 1789334350}
   m_Layer: 0
   m_Name: Platform14
   m_TagString: Untagged
@@ -14257,7 +14559,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 10
-      m_TileSpriteIndex: 10
+      m_TileSpriteIndex: 19
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -14588,8 +14890,8 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: -1350646846, guid: 99e2db6579e3ca2428fc818e8b65aba0, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -470010558, guid: 99e2db6579e3ca2428fc818e8b65aba0, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 9
     m_Data: {fileID: 1994329879, guid: 99e2db6579e3ca2428fc818e8b65aba0, type: 3}
   - m_RefCount: 0
@@ -14606,8 +14908,8 @@ Tilemap:
     m_Data: {fileID: 2055518849, guid: 99e2db6579e3ca2428fc818e8b65aba0, type: 3}
   - m_RefCount: 9
     m_Data: {fileID: 927520914, guid: 99e2db6579e3ca2428fc818e8b65aba0, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -470010558, guid: 99e2db6579e3ca2428fc818e8b65aba0, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -293317699, guid: 99e2db6579e3ca2428fc818e8b65aba0, type: 3}
   - m_RefCount: 1
@@ -14666,6 +14968,35 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &1789334349
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789334345}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
+--- !u!114 &1789334350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789334345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 263750853b408dd4281f8f075f85b16a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformHeight: 0
 --- !u!1 &1814350612
 GameObject:
   m_ObjectHideFlags: 0
@@ -19608,6 +19939,8 @@ GameObject:
   - component: {fileID: 1846639412}
   - component: {fileID: 1846639414}
   - component: {fileID: 1846639413}
+  - component: {fileID: 1846639415}
+  - component: {fileID: 1846639416}
   m_Layer: 0
   m_Name: Platform12
   m_TagString: Untagged
@@ -20201,6 +20534,35 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &1846639415
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846639411}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
+--- !u!114 &1846639416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846639411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 263750853b408dd4281f8f075f85b16a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformHeight: 0
 --- !u!1 &1861656064
 GameObject:
   m_ObjectHideFlags: 0
