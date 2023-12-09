@@ -154,12 +154,17 @@ public class PlayerMovement : MonoBehaviour
                 isOnGround = false;
             }
         }
+        if(rb.velocity.y < 0 && isJumping)
+        {
+            isJumping = false;
+        }
         if(rb.velocity.y < 0 && !isOnGround)
         {
             Debug.Log("This");
-            isJumping = false;
+            
             playerAnimator.PlayerFall();
         }
+        
         
         if(JumpInput() && lastInputJumpTime > 0 && !isSlamming)
         {
