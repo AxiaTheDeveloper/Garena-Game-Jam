@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class CurtainFadeGame : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    [SerializeField]private RectTransform fadeBG;
+    [SerializeField]private float hideUISpeed = 2f;
+    private void Awake() {
+        fadeBG = GetComponent<RectTransform>();
+        HideUI();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void HideUI(){
+        LeanTween.alpha(fadeBG, 0f, hideUISpeed);
     }
 }
