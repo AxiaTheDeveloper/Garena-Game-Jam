@@ -34,7 +34,7 @@ public class UIAnimation : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     {
         LeanTween.move(lineGameObject, gameObject.transform, timer);
         if (uiType == WhichUI.ExitButton)
-        {
+        {   
             LeanTween.color(lineGameObject.transform.GetChild(1).gameObject.GetComponent<RectTransform>(), Color.red, timer);
             LeanTween.color(lineGameObject.transform.GetChild(0).gameObject.GetComponent<RectTransform>(), Color.red, timer);
             var color = text.color;

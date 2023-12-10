@@ -111,7 +111,7 @@ public class PlayerMovement : MonoBehaviour
             }
             else
             {
-                if(gameInput.GetInputSlam() && rb.velocity.y != 0)
+                if(gameInput.GetInputSlam() && rb.velocity.y != 0 && lastOnGroundTime <= 0)
                 {
                     Slam();
                 }
@@ -234,26 +234,18 @@ public class PlayerMovement : MonoBehaviour
             playerAnimator.PlayerFall();
         }
         
+        if(!isOnGround && !isJumping && lastOnGroundTime >= 0) 
+        {
+            if (JumpInput())
+            {
+                Jump();
+            }
+            
+        }
         
         if(JumpInput() && lastInputJumpTime > 0 && !isSlamming && isOnGround)
         {
-            lastInputJumpTime = 0;
-            lastOnGroundTime = 0;
-            float tempForce = jumpForce;
-            if(rb.velocity.y < 0)
-            {
-                tempForce -= rb.velocity.y;
-                rb.velocity = new Vector2(rb.velocity.x, Mathf.Max(rb.velocity.y, -maxFallSpeed));
-            }
-            rb.velocity = new Vector2(rb.velocity.x, 0);
-            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            counterJump++;
-            playerAnimator.PlayerJump();
-            SFXManager.Instance.PlayJump();
-
-            isJumping = true;
-            isJumpCut = false;
-            isOnGround = false;
+            Jump();
 
         }
 
@@ -294,5 +286,26 @@ public class PlayerMovement : MonoBehaviour
     public int GetCounterJump()
     {
         return counterJump;
+    }
+
+    private void Jump()
+    {
+        lastInputJumpTime = 0;
+        lastOnGroundTime = 0;
+        float tempForce = jumpForce;
+        if (rb.velocity.y < 0)
+        {
+            tempForce -= rb.velocity.y;
+            rb.velocity = new Vector2(rb.velocity.x, Mathf.Max(rb.velocity.y, -maxFallSpeed));
+        }
+        rb.velocity = new Vector2(rb.velocity.x, 0);
+        rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        counterJump++;
+        playerAnimator.PlayerJump();
+        SFXManager.Instance.PlayJump();
+
+        isJumping = true;
+        isJumpCut = false;
+        isOnGround = false;
     }
 }

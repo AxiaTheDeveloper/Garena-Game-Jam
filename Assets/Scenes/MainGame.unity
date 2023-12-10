@@ -3130,6 +3130,8 @@ GameObject:
   - component: {fileID: 871214919}
   - component: {fileID: 871214918}
   - component: {fileID: 871214920}
+  - component: {fileID: 871214922}
+  - component: {fileID: 871214921}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3195,20 +3197,20 @@ MonoBehaviour:
   gameManager: {fileID: 1575004035}
   moveSpeed: 7
   moveDirection: {x: 0, y: 0}
-  accelerate: 10
-  deccelerate: 10
-  moveFriction: 0.2
-  jumpForce: 11
+  accelerate: 11
+  deccelerate: 16
+  moveFriction: 0.5
+  jumpForce: 11.6
   checkGroundSize: {x: 0.3, y: 0.53913}
   isOnGround: 0
   isJumping: 0
   isJumpCut: 0
   lastOnGroundTime: 0
   lastInputJumpTime: 0
-  coyoteTime: 0.1
+  coyoteTime: 0.2
   jumpInputBuffer: 0.2
   defaultGravScale: 2
-  gravScaleMultiplier: 2
+  gravScaleMultiplier: 2.1
   maxFallSpeed: 20
   isSlamming: 0
   firstHitSlam: 0
@@ -3254,6 +3256,38 @@ CapsuleCollider2D:
   m_Offset: {x: 0.0067353845, y: -0.083934575}
   m_Size: {x: 0.7469622, y: 0.91046995}
   m_Direction: 0
+--- !u!70 &871214921
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871214913}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.009253196, y: -0.32562456}
+  m_Size: {x: 0.7853411, y: 0.42488664}
+  m_Direction: 1
+--- !u!70 &871214922
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871214913}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.009253186, y: -0.4107504}
+  m_Size: {x: 0.78534096, y: 0.254635}
+  m_Direction: 1
 --- !u!1 &896623086
 GameObject:
   m_ObjectHideFlags: 0
@@ -21804,6 +21838,7 @@ MonoBehaviour:
   UI: {fileID: 1660750407}
   buttons: {fileID: 896623086}
   fade: {fileID: 451989025}
+  isDoing: 0
 --- !u!1 &1958546044
 GameObject:
   m_ObjectHideFlags: 0
