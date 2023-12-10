@@ -39,7 +39,7 @@ public class PlayerIdentity : MonoBehaviour
     public void Death()
     {
         playerAnimator.DieAnimation();
-        // GameManager.Instance.Death();
+        GameManager.Instance.Death();
     }
     public float GetHeight()
     {

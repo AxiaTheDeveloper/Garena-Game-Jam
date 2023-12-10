@@ -9,6 +9,9 @@ TagManager:
   - Destroyable
   - Enemy
   - DestroyByLava
+  - Undefined
+  - AreaEffector
+  - BGMSlider
   layers:
   - Default
   - TransparentFX

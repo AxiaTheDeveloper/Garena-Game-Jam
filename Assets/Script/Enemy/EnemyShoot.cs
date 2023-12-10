@@ -59,6 +59,7 @@ public class EnemyShoot : MonoBehaviour
                 shootDelay = shootDelayTime;
                 bulletNumber++;
             }
+            SFXManager.Instance.PlayShoot();
             
         }
         if(bulletNumber == totalBullet)
