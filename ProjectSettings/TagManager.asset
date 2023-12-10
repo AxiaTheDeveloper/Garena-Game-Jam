@@ -12,6 +12,7 @@ TagManager:
   - Undefined
   - AreaEffector
   - BGMSlider
+  - Lava
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - UI
   - Ground
   - Enemy
-  - 
+  - Lava
   - 
   - 
   - 

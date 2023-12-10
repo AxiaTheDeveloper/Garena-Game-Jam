@@ -9,6 +9,7 @@ public class PauseUI : MonoBehaviour
     [SerializeField]private Slider BGMSlider;
     [SerializeField]private CanvasGroup UI;
     [SerializeField]private GameObject buttons;
+    [SerializeField]private CurtainFadeGame fade;
     private void Awake() {
         CloseUI();
     }
@@ -29,7 +30,7 @@ public class PauseUI : MonoBehaviour
     }
     public void Restart()
     {
-        SceneManager.LoadSceneAsync("MainGame");
+        fade.ShowUIRestart();
     }
     public void CloseUI()
     {
@@ -53,6 +54,7 @@ public class PauseUI : MonoBehaviour
     }
     public void Mainmenu()
     {
-        SceneManager.LoadSceneAsync("Main Menu");
+        BGMManager.Instance.DestroyInstance();
+        fade.ShowUIMainMenu();
     }
 }

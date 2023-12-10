@@ -121,6 +121,8 @@ public class PlayerAnimator : MonoBehaviour
     public void Diee()
     {
         gameObject.SetActive(false);
+        animator.enabled = false;
+        SFXManager.Instance.gameObject.SetActive(false);
         GameManager.Instance.ShowDeadUI();
 
     }

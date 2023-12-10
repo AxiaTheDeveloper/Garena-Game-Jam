@@ -8,6 +8,7 @@ public class PlatformIdentity : MonoBehaviour
     [SerializeField]private AreaEffector2D areaEffector2D;
     [SerializeField]private bool isWindy, isLeft, isDoing;
     [SerializeField]private float magnitudes, variations, moveDirectionTimerMax, moveDirectionTimer, waitTimerMax, waitTimer;
+    [SerializeField]private ParticleSystem right, left;
     public void ChangeAreaEffector2D(float magnitude, float variation, float moveDirectionTimer, float waitTimer)
     {
         magnitudes = magnitude;
@@ -50,9 +51,11 @@ public class PlatformIdentity : MonoBehaviour
                     }
                     else
                     {
+                        left.Play();
                         moveDirectionTimer -= Time.deltaTime;
                         if(moveDirectionTimer <= 0)
                         {   
+                            left.Stop();
                             isDoing = false;
                             waitTimer = waitTimerMax;
                             isLeft = false;
@@ -70,9 +73,11 @@ public class PlatformIdentity : MonoBehaviour
                     }
                     else
                     {
+                        right.Play();
                         moveDirectionTimer -= Time.deltaTime;
                         if(moveDirectionTimer <= 0)
                         {
+                            right.Stop();
                             isDoing = false;
                             waitTimer = waitTimerMax;
                             isLeft = true;

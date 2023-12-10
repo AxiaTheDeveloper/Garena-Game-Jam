@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CurtainFadeGame : MonoBehaviour
 {
-    [SerializeField]private CanvasGroup fadeBG;
+    [SerializeField]private CanvasGroup fadeBG, fade;
     [SerializeField]private CanvasGroup deathScreen;
     [SerializeField]private float hideUISpeed = 0.8f;
     [SerializeField]private GameManager gameManager;
@@ -33,6 +34,28 @@ public class CurtainFadeGame : MonoBehaviour
             ()=> 
             {
                 deathScreen.LeanAlpha(1f, 0.8f);
+            }
+        );
+    }
+    public void ShowUIMainMenu()
+    {
+        fade.gameObject.SetActive(true);
+        fade.LeanAlpha( 1f, 0.1f).setOnComplete(
+            ()=> 
+            {
+
+                SceneManager.LoadSceneAsync("Main Menu");
+            }
+        );
+    }
+    public void ShowUIRestart()
+    {
+        fade.gameObject.SetActive(true);
+        fade.LeanAlpha( 1f, 0.1f).setOnComplete(
+            ()=> 
+            {
+
+                SceneManager.LoadSceneAsync("MainGame");
             }
         );
     }

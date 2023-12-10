@@ -43,6 +43,8 @@ public class PlayerIdentity : MonoBehaviour
     }
     public void Death()
     {
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
         playerAnimator.DieAnimation();
         GameManager.Instance.Death();
     }

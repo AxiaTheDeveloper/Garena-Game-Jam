@@ -14,6 +14,7 @@ public class DeathScreen : MonoBehaviour
     [SerializeField]private PlayerIdentity playerIdentity;
     [SerializeField]private GameObject backSettingsButton;
     [SerializeField]private PauseUI pauseUI;
+    [SerializeField]private CurtainFadeGame fade;
     public void UpdateText()
     {
         float maxHeight = playerIdentity.GetMaxHeight();
@@ -39,11 +40,13 @@ public class DeathScreen : MonoBehaviour
     }
     public void RestartGame()
     {
-        SceneManager.LoadSceneAsync("MainGame");
+        
+        fade.ShowUIRestart();
     }
     public void MainMenu()
     {
-        SceneManager.LoadSceneAsync("Main Menu");
+        BGMManager.Instance.DestroyInstance();
+        fade.ShowUIMainMenu();
     }
     public void Settings()
     {
