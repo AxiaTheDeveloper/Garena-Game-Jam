@@ -10,8 +10,26 @@ public class PauseUI : MonoBehaviour
     [SerializeField]private CanvasGroup UI;
     [SerializeField]private GameObject buttons;
     [SerializeField]private CurtainFadeGame fade;
+    [SerializeField]private bool isDoing;
     private void Awake() {
         CloseUI();
+    }
+    private void Update() 
+    {
+        if(GameInput.Instance.GetInputPause())
+        {
+            if(GameManager.Instance.StateGame() == GameManager.GameStates.GameStart && !isDoing)
+            {
+                GameManager.Instance.Pause();
+                ShowUI();
+                isDoing = true;
+            }
+            else if(GameManager.Instance.StateGame() == GameManager.GameStates.Pause && !isDoing)
+            {
+                CloseUIInGame();
+                isDoing = true;
+            }
+        }
     }
     public Slider GetBGMSlider()
     {
@@ -20,7 +38,9 @@ public class PauseUI : MonoBehaviour
     public void ShowUI()
     {
         UI.gameObject.SetActive(true);
-        UI.LeanAlpha(1f, 0.8f);
+        UI.LeanAlpha(1f, 0.8f).setOnComplete(
+            ()=>isDoing = false
+        );
     }
     public void ShowUIEnd()
     {
@@ -49,6 +69,7 @@ public class PauseUI : MonoBehaviour
             {
                 UI.gameObject.SetActive(false);
                 GameManager.Instance.Pause();
+                isDoing = false;
             }
         );
     }

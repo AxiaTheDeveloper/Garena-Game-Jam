@@ -88,6 +88,7 @@ public class PlayerMovement : MonoBehaviour
                     if(firstHitSlam)
                     {
                         firstHitSlam = false;
+                        rb.velocity = new Vector2(0, rb.velocity.y);
                         playerAnimator.PlaySlamStuck();
                         cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = intensityAmp;
                         cinemachineBasicMultiChannelPerlin.m_FrequencyGain = intensityAmp;

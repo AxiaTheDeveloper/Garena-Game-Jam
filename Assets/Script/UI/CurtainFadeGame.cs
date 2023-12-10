@@ -7,7 +7,7 @@ public class CurtainFadeGame : MonoBehaviour
 {
     [SerializeField]private CanvasGroup fadeBG, fade;
     [SerializeField]private CanvasGroup deathScreen;
-    [SerializeField]private float hideUISpeed = 0.8f;
+    [SerializeField]private float hideUISpeed = 0.2f;
     [SerializeField]private GameManager gameManager;
     private void Awake() {
         // fadeBG = GetComponent<RectTransform>();
