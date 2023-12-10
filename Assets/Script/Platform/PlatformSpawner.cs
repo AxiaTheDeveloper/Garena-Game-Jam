@@ -55,7 +55,7 @@ public class PlatformSpawner : MonoBehaviour
                 minLength = 9;
                 maxLength = 18;
             }
-            else if(totalHeight/5 == 5)
+            else
             {
                 tahapPlatform = 5;
                 minLength = 4;

@@ -79,6 +79,78 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 15.4, y: 9}
   m_EdgeRadius: 0
+--- !u!1 &3401115661368448458
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3443982599879850268}
+  - component: {fileID: 4680947755206267135}
+  - component: {fileID: 3880782532641615512}
+  m_Layer: 0
+  m_Name: HeightPlayerCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3443982599879850268
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3401115661368448458}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3830585239330782178}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &4680947755206267135
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3401115661368448458}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -4.0382557}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 15.4, y: 0.4}
+  m_EdgeRadius: 0
+--- !u!114 &3880782532641615512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3401115661368448458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64c5fe612a53f37459415d2aa8a26efa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformIdentity: {fileID: 0}
 --- !u!1 &3830585239330782179
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,7 +164,6 @@ GameObject:
   - component: {fileID: 3830585239330782177}
   - component: {fileID: 3830585239330782183}
   - component: {fileID: 3830585239330782182}
-  - component: {fileID: 6630803279150411483}
   m_Layer: 6
   m_Name: Platform19
   m_TagString: Ground
@@ -116,6 +187,7 @@ Transform:
   - {fileID: 8082734643568812478}
   - {fileID: 7543179583032709787}
   - {fileID: 7987087134875310489}
+  - {fileID: 3443982599879850268}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -749,32 +821,6 @@ MonoBehaviour:
   moveDirectionTimer: 0
   waitTimerMax: 0
   waitTimer: 0
---- !u!61 &6630803279150411483
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3830585239330782179}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -4.0382557}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 15.4, y: 0.4}
-  m_EdgeRadius: 0
 --- !u!1 &4629140690970201664
 GameObject:
   m_ObjectHideFlags: 0
@@ -785,7 +831,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7987087134875310489}
   - component: {fileID: 4056779059984706952}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: LavaChecker
   m_TagString: DestroyByLava
   m_Icon: {fileID: 0}

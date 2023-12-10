@@ -8,7 +8,7 @@ public class PlayerIdentity : MonoBehaviour
     [SerializeField]private int playerHeightNow;
     [SerializeField]private PlayerMovement playerMovement;
     [SerializeField]private PlayerAnimator playerAnimator;
-    [SerializeField]private float startHeight_m, totalHeight;
+    [SerializeField]private float startHeight_m, totalHeight, maxHeight =0;
     private void Awake() {
         playerMovement = GetComponent<PlayerMovement>();
         Instance = this;
@@ -16,10 +16,15 @@ public class PlayerIdentity : MonoBehaviour
     private void Update() 
     {
         totalHeight = transform.position.y - startHeight_m;
+        if(totalHeight > maxHeight)maxHeight = totalHeight;
     }
     public int PlayerHeight()
     {
         return playerHeightNow;
+    }
+    public float GetMaxHeight()
+    {
+        return maxHeight;
     }
     public void ChangePlayerHeight(int newHeight)
     {

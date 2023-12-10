@@ -6,7 +6,7 @@ public class Lava : MonoBehaviour
 {
     [SerializeField]private float startGoingUpTimer;
     [SerializeField]private float LavaGoingUpSpeedStart, LavaGoingUpSpeed, lavaMultiplier;
-    [SerializeField]private float batasMaXPlayerDenganLava;
+    [SerializeField]private int[] batasMaXPlayerDenganLava;
     [SerializeField]private PlayerAttack playerAttack;
     // [SerializeField]private float[] speedMultiplier;
     [SerializeField]private Rigidbody2D rb;
@@ -19,13 +19,36 @@ public class Lava : MonoBehaviour
             if(startGoingUpTimer > 0)startGoingUpTimer -= Time.deltaTime;
             else
             {
-                LavaGoingUpSpeed = LavaGoingUpSpeedStart * (PlayerIdentity.Instance.PlayerHeight()/5+1);
+                int playerHeight = PlayerIdentity.Instance.PlayerHeight();
+                LavaGoingUpSpeed = LavaGoingUpSpeedStart * (playerHeight/5+1);
                 int plus = playerAttack.GetJumpGiftCounter();
                 for(int i=0;i<plus;i++)
                 {
                     LavaGoingUpSpeed *= lavaMultiplier;
                 }
                 // rb.velocity = new Vector2(0f, 1 * LavaGoingUpSpeedStart);
+                if(playerHeight/10 == 0)
+                {
+                    if(PlayerIdentity.Instance.GetHeight() - lavaTop.position.y > 36)//4*9
+                    {
+                        LavaGoingUpSpeed = 3;
+                    }
+                }
+                else if(playerHeight/10 == 1)
+                {
+                    if(PlayerIdentity.Instance.GetHeight() - lavaTop.position.y > 27)//4*9
+                    {
+                        LavaGoingUpSpeed = 3;
+                    }
+                }
+                else
+                {
+                    if(PlayerIdentity.Instance.GetHeight() - lavaTop.position.y > 18)//4*9
+                    {
+                        LavaGoingUpSpeed = 3;
+                    }
+                }
+               
                 transform.Translate(Vector3.up * LavaGoingUpSpeed * Time.deltaTime);
             }
         }

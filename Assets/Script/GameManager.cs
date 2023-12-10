@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
         if(isPause)
         {
             stateGame = GameStates.GameStart;
+            if(SFXManager.Instance.isWalkingSFXPlay())SFXManager.Instance.StopWalkingSFX();
             OnUnPause?.Invoke(this, EventArgs.Empty);
         }
         else
@@ -42,6 +43,7 @@ public class GameManager : MonoBehaviour
     }
     public void Death()
     {
+        SFXManager.Instance.StopWalkingSFX();
         stateGame = GameStates.Dead;
         deathScreen.UpdateText();
         

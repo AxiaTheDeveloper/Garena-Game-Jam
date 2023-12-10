@@ -18,11 +18,17 @@ public class CurtainFadeGame : MonoBehaviour
     }
     private void HideUI(){
         fadeBG.LeanAlpha(0f, hideUISpeed).setOnComplete(
-            ()=> gameManager.GameStart()
+            ()=> 
+            {
+                gameManager.GameStart();
+                fadeBG.gameObject.SetActive(false);
+            }
+            
         );
     }
     public void ShowUIDead(){
         deathScreen.gameObject.SetActive(true);
+        fadeBG.gameObject.SetActive(true);
         fadeBG.LeanAlpha( 1f, hideUISpeed).setOnComplete(
             ()=> 
             {

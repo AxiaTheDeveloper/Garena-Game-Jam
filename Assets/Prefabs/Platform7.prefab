@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2476218890397666776}
   - component: {fileID: 2476218890397666774}
   - component: {fileID: 4676523511263881812}
-  - component: {fileID: 3280845916886108633}
   m_Layer: 6
   m_Name: Platform7
   m_TagString: Ground
@@ -36,6 +35,7 @@ Transform:
   - {fileID: 6194623261737951427}
   - {fileID: 3903052115694596993}
   - {fileID: 2571133714151432502}
+  - {fileID: 6103473196030041727}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -699,13 +699,46 @@ MonoBehaviour:
   moveDirectionTimer: 0
   waitTimerMax: 0
   waitTimer: 0
---- !u!61 &3280845916886108633
+--- !u!1 &3145428771037298302
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6103473196030041727}
+  - component: {fileID: 6642932852477214349}
+  - component: {fileID: 139916102306528339}
+  m_Layer: 0
+  m_Name: HeightPlayerCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6103473196030041727
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3145428771037298302}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2476218890397666779}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &6642932852477214349
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2476218890397666778}
+  m_GameObject: {fileID: 3145428771037298302}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -725,6 +758,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 15.4, y: 0.4}
   m_EdgeRadius: 0
+--- !u!114 &139916102306528339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3145428771037298302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64c5fe612a53f37459415d2aa8a26efa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformIdentity: {fileID: 0}
 --- !u!1 &4083819620172827870
 GameObject:
   m_ObjectHideFlags: 0
@@ -814,7 +860,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2571133714151432502}
   - component: {fileID: 233142712925803705}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: LavaChecker
   m_TagString: DestroyByLava
   m_Icon: {fileID: 0}

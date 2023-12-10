@@ -8,6 +8,7 @@ public class PauseUI : MonoBehaviour
 {
     [SerializeField]private Slider BGMSlider;
     [SerializeField]private CanvasGroup UI;
+    [SerializeField]private GameObject buttons;
     private void Awake() {
         CloseUI();
     }
@@ -17,8 +18,14 @@ public class PauseUI : MonoBehaviour
     }
     public void ShowUI()
     {
-        // UI.gameObject.SetActive(true);
+        UI.gameObject.SetActive(true);
         UI.LeanAlpha(1f, 0.8f);
+    }
+    public void ShowUIEnd()
+    {
+        UI.gameObject.SetActive(true);
+        UI.LeanAlpha(1f, 0.8f);
+        buttons.SetActive(false);
     }
     public void Restart()
     {
@@ -26,10 +33,10 @@ public class PauseUI : MonoBehaviour
     }
     public void CloseUI()
     {
-        UI.LeanAlpha(0f, 0.8f).setOnComplete(
+        UI.LeanAlpha(0f, 0.2f).setOnComplete(
             ()=>
             {
-                UI.gameObject.SetActive(true);
+                UI.gameObject.SetActive(false);
             }
         );
         
@@ -39,7 +46,7 @@ public class PauseUI : MonoBehaviour
         UI.LeanAlpha(0f, 0.8f).setOnComplete(
             ()=>
             {
-                // UI.gameObject.SetActive(false);
+                UI.gameObject.SetActive(false);
                 GameManager.Instance.Pause();
             }
         );

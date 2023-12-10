@@ -9,6 +9,7 @@ public class EnemyShoot : MonoBehaviour
     [SerializeField]private int totalBullet, bulletNumber;
     private List<Transform> bullets = new List<Transform>();
     private bool canShoot, canStartCoolDownNow;
+    [SerializeField]private Animator playerAnimator;
 
     private void Update() 
     {
@@ -16,20 +17,23 @@ public class EnemyShoot : MonoBehaviour
         {
             
             
-            // if(canStartCoolDownNow)
-            // {
-            //     canStartCoolDownNow = false;
-            //     // canShoot = true;
-            //     bulletNumber = 0;
-            //     shootDelay = shootDelayTime;
-            // }
+            playerAnimator.enabled = true;
+        }
+        else
+        {
+            playerAnimator.enabled = false;
         }
         
     }
     public void CanShoot()
     {
-        canShoot = true;
-        Shoot();
+        if(GameManager.Instance.StateGame() == GameManager.GameStates.GameStart)
+        {
+            canShoot = true;
+            Shoot();
+            
+        }
+        
     }
     public void Shoot()
     {

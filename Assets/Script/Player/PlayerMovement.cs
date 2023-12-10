@@ -208,7 +208,7 @@ public class PlayerMovement : MonoBehaviour
         
         if(!isJumping)
         {
-            if(Physics2D.OverlapBox(transform.position - new Vector3(0,0.83f), checkGroundSize, 0, groundLayer))
+            if(Physics2D.OverlapBox(transform.position - new Vector3(0,0.53913f), checkGroundSize, 0, groundLayer))
             {
                 playerAnimator.PlayerDoneFall();
                 SetPlayerGravityScale(defaultGravScale);

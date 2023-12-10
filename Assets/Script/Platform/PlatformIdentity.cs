@@ -27,13 +27,13 @@ public class PlatformIdentity : MonoBehaviour
         moveDirectionTimer = moveDirectionTimerMax;
         // waitTimer = waitTimerMax;
     }
-    private void OnTriggerEnter2D(Collider2D other) {
-        if(other.gameObject.CompareTag("Player"))
-        {
-            PlayerIdentity identity = other.GetComponent<PlayerIdentity>();
-            if(identity.PlayerHeight() < platformHeight)identity.ChangePlayerHeight(platformHeight);
-        }
-    }
+    // private void OnTriggerEnter2D(Collider2D other) {
+    //     if(other.gameObject.CompareTag("Player"))
+    //     {
+    //         PlayerIdentity identity = other.GetComponent<PlayerIdentity>();
+    //         if(identity.PlayerHeight() < platformHeight)identity.ChangePlayerHeight(platformHeight);
+    //     }
+    // }
     private void Update() 
     {
         if(isWindy)
@@ -93,5 +93,8 @@ public class PlatformIdentity : MonoBehaviour
         areaEffector2D.forceMagnitude = magnitude;
         areaEffector2D.forceVariation = variation;
     }
-    
+    public int GetPlatformHeight()
+    {
+        return platformHeight;
+    }
 }

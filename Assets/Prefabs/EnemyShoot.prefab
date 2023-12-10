@@ -54,6 +54,7 @@ MonoBehaviour:
   shootDelayTime: 5
   totalBullet: 5
   bulletNumber: 0
+  playerAnimator: {fileID: 7132954766471951707}
 --- !u!50 &1721520638
 Rigidbody2D:
   serializedVersion: 4

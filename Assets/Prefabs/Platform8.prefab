@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1514624926928217835}
   - component: {fileID: 1514624926928217833}
   - component: {fileID: 4934886872024594047}
-  - component: {fileID: 6239767418635311285}
   m_Layer: 6
   m_Name: Platform8
   m_TagString: Ground
@@ -37,6 +36,7 @@ Transform:
   - {fileID: 3273743306547541369}
   - {fileID: 184324677540707239}
   - {fileID: 7774598042545523013}
+  - {fileID: 4668344880311779069}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -664,7 +664,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1514624926928217837}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 263750853b408dd4281f8f075f85b16a, type: 3}
   m_Name: 
@@ -680,13 +680,46 @@ MonoBehaviour:
   moveDirectionTimer: 0
   waitTimerMax: 0
   waitTimer: 0
---- !u!61 &6239767418635311285
+--- !u!1 &6691881868381330471
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4668344880311779069}
+  - component: {fileID: 7617794373605564586}
+  - component: {fileID: 3471724597208470286}
+  m_Layer: 0
+  m_Name: HeightPlayerCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4668344880311779069
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6691881868381330471}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1514624926928217834}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &7617794373605564586
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1514624926928217837}
+  m_GameObject: {fileID: 6691881868381330471}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -706,6 +739,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 15.4, y: 0.4}
   m_EdgeRadius: 0
+--- !u!114 &3471724597208470286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6691881868381330471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64c5fe612a53f37459415d2aa8a26efa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformIdentity: {fileID: 0}
 --- !u!1 &7000751158156105492
 GameObject:
   m_ObjectHideFlags: 0
@@ -716,7 +762,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7774598042545523013}
   - component: {fileID: 4140190016621161711}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: LavaChecker
   m_TagString: DestroyByLava
   m_Icon: {fileID: 0}
