@@ -98,7 +98,11 @@ public class PlayerMovement : MonoBehaviour
                     rb.velocity = new Vector2(rb.velocity.x, Mathf.Max(rb.velocity.y, -maxFallSpeed));
                     if(moveDirection != Vector2.zero)moveDirection = Vector2.zero;
                     slamingCooldown-= Time.deltaTime;
-                    if(slamingCooldown <= 0 && !playerAnimator.GetUnstuck())isSlamming = false;//mslh lagi :D
+                    if (slamingCooldown <= 0 || !playerAnimator.GetUnstuck()) 
+                    {
+                        isSlamming = false;//untuk sementara ini fixnya make countdown || the unstuck get it value correctly
+                    }
+                    
                 }
                 else
                 {

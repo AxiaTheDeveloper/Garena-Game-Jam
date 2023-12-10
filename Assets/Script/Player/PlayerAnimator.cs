@@ -33,7 +33,7 @@ public class PlayerAnimator : MonoBehaviour
             animator.Play("Falling");
             runOnceFalling = true;
         }
-        if (isJumping && !runOnceJumping && !isFalling && !isDead)
+        if (isJumping && !runOnceJumping && !isFalling && !isStuck && !isDead)
         {
             animator.Play("Jump");
             runOnceJumping = true;
@@ -96,9 +96,8 @@ public class PlayerAnimator : MonoBehaviour
 
     public void PlaySlamStuck()
     {
-        isStuck = true;
-        Debug.Log("Calleddddddddd");
         animator.Play("SlamStuck");
+        isStuck = true;
     }
     public void PlaySlamWakeUp()
     {

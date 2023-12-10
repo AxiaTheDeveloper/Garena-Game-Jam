@@ -2123,8 +2123,8 @@ MonoBehaviour:
   isSlamming: 0
   firstHitSlam: 0
   slamGravScaleMultiplier: 12.5
-  slamingCooldownTime: 0.2
-  slamingCooldown: 0
+  slamingCooldownTime: 3.6
+  slamingCooldown: 3.6
   slamAttack: {fileID: 1359023292}
   cinemachine: {fileID: 245981110}
   intensityAmp: 3
