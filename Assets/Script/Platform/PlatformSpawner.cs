@@ -67,7 +67,7 @@ public class PlatformSpawner : MonoBehaviour
                 while(random == lastRandomNumber )
                 {
                     random = Random.Range(minLength,maxLength);
-                    while(lastRandomNumber == 5 && random == 7)
+                    while((lastRandomNumber == 5 && random == 7) || lastRandomNumber == 14 && random == 16)
                     {
                         random = Random.Range(minLength,maxLength);
                     }
