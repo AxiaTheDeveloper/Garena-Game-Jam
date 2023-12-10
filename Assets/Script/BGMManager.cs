@@ -40,7 +40,7 @@ public class BGMManager : MonoBehaviour
 
     private void Update() {
         if(bgmSlider == null){
-            // bgmSlider = GameObject.FindWithTag("BGMSlider").transform.parent.transform.parent.GetComponent<PauseUI>().GetBGMSlider();
+            bgmSlider = GameObject.FindWithTag("BGMSlider").transform.parent.transform.parent.GetComponent<PauseUI>().GetBGMSlider();
             float saveVolume = volume;
             if(bgmSlider.value == volume)bgmSlider.value = 0;
             bgmSlider.value = saveVolume;

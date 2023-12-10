@@ -121,7 +121,7 @@ public class PlayerAnimator : MonoBehaviour
     public void Diee()
     {
         gameObject.SetActive(false);
-        GameManager.Instance.Death();
+        GameManager.Instance.ShowDeadUI();
 
     }
 }

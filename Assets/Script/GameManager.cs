@@ -44,6 +44,10 @@ public class GameManager : MonoBehaviour
     {
         stateGame = GameStates.Dead;
         deathScreen.UpdateText();
+        
+    }
+    public void ShowDeadUI()
+    {
         fade.ShowUIDead();
     }
     public GameStates StateGame()

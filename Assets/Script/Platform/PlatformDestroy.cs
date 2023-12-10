@@ -9,8 +9,13 @@ public class PlatformDestroy : MonoBehaviour
     public void GotHit()
     {
         totalHitCanBeTaken-= 1;
+        if(totalHitCanBeTaken == 1)
+        {
+            SFXManager.Instance.PlayFirstHit();
+        }
         if(totalHitCanBeTaken == 0)
         {
+            SFXManager.Instance.PlaySecondHit();
             Destroy(this.gameObject);
         }
     }

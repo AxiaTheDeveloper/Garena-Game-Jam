@@ -8,6 +8,7 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField]private BoxCollider2D coll;
     [SerializeField]private PlayerMovement playerMovement;
     [SerializeField]private int giftNumber, attackGiftCounter, jumpGiftCounter;
+    [SerializeField]private InGameUI inGameUI;
     private int enemyKilledTotal = 0;
     private void OnTriggerEnter2D(Collider2D other) 
     {
@@ -43,12 +44,16 @@ public class PlayerAttack : MonoBehaviour
             if(giftNumber == 1)
             {
                 attackGiftCounter++;
+                inGameUI.UpdateAttGiftVisual(attackGiftCounter);
                 coll.size = new Vector2(coll.size.x * attackSizeMultiplier, coll.size.y);
+                SFXManager.Instance.PlayPowerUp();
             }
             else if(giftNumber == 2)
             {
                 jumpGiftCounter++;
+                inGameUI.UpdateJumpGiftVisual(jumpGiftCounter);
                 playerMovement.ChangeJumpForce(jumpforceMultiplier);
+                SFXManager.Instance.PlayPowerUp();
             }
         }
         else

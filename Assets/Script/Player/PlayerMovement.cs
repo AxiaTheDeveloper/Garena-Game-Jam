@@ -1,7 +1,6 @@
 using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
-using Cinemachine;
 using UnityEngine;
 using System;
 
@@ -151,8 +150,14 @@ public class PlayerMovement : MonoBehaviour
         if(moveDirection.x == 0)
         {
             playerAnimator.PlayerWalk(false);
+            if(SFXManager.Instance.isWalkingSFXPlay())SFXManager.Instance.StopWalkingSFX();
         }
-        else playerAnimator.PlayerWalk(true);
+        else 
+        {
+            if(!SFXManager.Instance.isWalkingSFXPlay())SFXManager.Instance.PlayWalkingSFX();
+            playerAnimator.PlayerWalk(true);
+        }
+        
         
         float targetSpeed = moveDirection.x * moveSpeed;
         float speedDif_TargetStart = targetSpeed - rb.velocity.x;
@@ -203,7 +208,7 @@ public class PlayerMovement : MonoBehaviour
         
         if(!isJumping)
         {
-            if(Physics2D.OverlapBox(transform.position - new Vector3(0,0.5f), checkGroundSize, 0, groundLayer))
+            if(Physics2D.OverlapBox(transform.position - new Vector3(0,0.83f), checkGroundSize, 0, groundLayer))
             {
                 playerAnimator.PlayerDoneFall();
                 SetPlayerGravityScale(defaultGravScale);
@@ -243,6 +248,7 @@ public class PlayerMovement : MonoBehaviour
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             counterJump++;
             playerAnimator.PlayerJump();
+            SFXManager.Instance.PlayJump();
 
             isJumping = true;
             isJumpCut = false;
@@ -268,6 +274,7 @@ public class PlayerMovement : MonoBehaviour
     {
         isSlamming = true;
         playerAnimator.PlayerSlamming();
+        SFXManager.Instance.PlaySlam();
         SetPlayerGravityScale(defaultGravScale * slamGravScaleMultiplier);
         
         slamingCooldown = slamingCooldownTime;

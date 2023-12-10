@@ -13,7 +13,7 @@ public class Lava : MonoBehaviour
     [SerializeField]private Transform lavaTop;
     private void Update() 
     {
-        Debug.Log(lavaTop.position.y);
+        // Debug.Log(lavaTop.position.y);
         if(GameManager.Instance.StateGame() == GameManager.GameStates.GameStart)
         {
             if(startGoingUpTimer > 0)startGoingUpTimer -= Time.deltaTime;
